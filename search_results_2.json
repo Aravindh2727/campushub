@@ -1,0 +1,1227 @@
+[
+  {
+    "file": "backend\\controllers\\analyticsController.js",
+    "line": 6,
+    "content": "* Uses MongoDB Aggregation Framework to calculate total marks and assign ranks."
+  },
+  {
+    "file": "backend\\controllers\\attendanceController.js",
+    "line": 4,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\controllers\\authController.js",
+    "line": 4,
+    "content": "// Called after Firebase login/register to sync user to MongoDB"
+  },
+  {
+    "file": "backend\\controllers\\authController.js",
+    "line": 166,
+    "content": "// Delete from MongoDB"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 6,
+    "content": "console.log('Connecting to MongoDB...');"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 7,
+    "content": "await mongoose.connect(process.env.MONGO_URI);"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 8,
+    "content": "console.log('Connected to MongoDB');"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 10,
+    "content": "const db = mongoose.connection.db;"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 37,
+    "content": "console.log('Syncing mongoose indexes to ensure emisNumber index exists...');"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 45,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\drop_index.js",
+    "line": 46,
+    "content": "console.log('Disconnected from MongoDB');"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 2,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 6,
+    "content": "const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/edupulse';"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 8,
+    "content": "mongoose.connect(MONGO_URI)"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 10,
+    "content": "console.log('Connected to MongoDB for migration');"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 13,
+    "content": "const result = await mongoose.connection.db.collection('students').updateMany("
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 19,
+    "content": "mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\migrate.js",
+    "line": 22,
+    "content": "console.error('MongoDB connection error:', err);"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 3,
+    "content": "const attendanceRecordSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 5,
+    "content": "type: mongoose.Schema.Types.ObjectId,"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 16,
+    "content": "const attendanceSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 47,
+    "content": "type: mongoose.Schema.Types.ObjectId,"
+  },
+  {
+    "file": "backend\\models\\Attendance.js",
+    "line": 58,
+    "content": "module.exports = mongoose.model('Attendance', attendanceSchema);"
+  },
+  {
+    "file": "backend\\models\\Circular.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\Circular.js",
+    "line": 3,
+    "content": "const circularSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Circular.js",
+    "line": 40,
+    "content": "module.exports = mongoose.model('Circular', circularSchema);"
+  },
+  {
+    "file": "backend\\models\\ClassConfig.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\ClassConfig.js",
+    "line": 3,
+    "content": "const classConfigSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\ClassConfig.js",
+    "line": 25,
+    "content": "module.exports = mongoose.model('ClassConfig', classConfigSchema);"
+  },
+  {
+    "file": "backend\\models\\Homework.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\Homework.js",
+    "line": 3,
+    "content": "const homeworkSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Homework.js",
+    "line": 55,
+    "content": "module.exports = mongoose.model('Homework', homeworkSchema);"
+  },
+  {
+    "file": "backend\\models\\Material.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\Material.js",
+    "line": 3,
+    "content": "const materialSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Material.js",
+    "line": 37,
+    "content": "module.exports = mongoose.model('Material', materialSchema);"
+  },
+  {
+    "file": "backend\\models\\Student.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\Student.js",
+    "line": 3,
+    "content": "const markSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Student.js",
+    "line": 17,
+    "content": "const termSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Student.js",
+    "line": 26,
+    "content": "const studentSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\Student.js",
+    "line": 104,
+    "content": "module.exports = mongoose.model('Student', studentSchema);"
+  },
+  {
+    "file": "backend\\models\\StudentFeedback.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\StudentFeedback.js",
+    "line": 3,
+    "content": "const studentFeedbackSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\StudentFeedback.js",
+    "line": 5,
+    "content": "type: mongoose.Schema.Types.ObjectId,"
+  },
+  {
+    "file": "backend\\models\\StudentFeedback.js",
+    "line": 43,
+    "content": "type: mongoose.Schema.Types.ObjectId,"
+  },
+  {
+    "file": "backend\\models\\StudentFeedback.js",
+    "line": 66,
+    "content": "module.exports = mongoose.models.StudentFeedback || mongoose.model('StudentFeedback', studentFeedbackSchema);"
+  },
+  {
+    "file": "backend\\models\\User.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\models\\User.js",
+    "line": 3,
+    "content": "const userSchema = new mongoose.Schema({"
+  },
+  {
+    "file": "backend\\models\\User.js",
+    "line": 47,
+    "content": "module.exports = mongoose.model('User', userSchema);"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 17,
+    "content": "\"mongoose\": \"^9.7.4\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 316,
+    "content": "\"node_modules/@mongodb-js/saslprep\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 318,
+    "content": "\"resolved\": \"https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.4.12.tgz\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2393,
+    "content": "\"node_modules/mongodb-connection-string-url\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2395,
+    "content": "\"resolved\": \"https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-7.0.1.tgz\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2406,
+    "content": "\"node_modules/mongodb-connection-string-url/node_modules/tr46\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2418,
+    "content": "\"node_modules/mongodb-connection-string-url/node_modules/webidl-conversions\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2427,
+    "content": "\"node_modules/mongodb-connection-string-url/node_modules/whatwg-url\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2440,
+    "content": "\"node_modules/mongoose\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2442,
+    "content": "\"resolved\": \"https://registry.npmjs.org/mongoose/-/mongoose-9.7.4.tgz\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2448,
+    "content": "\"mongodb\": \"~7.2\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2459,
+    "content": "\"url\": \"https://opencollective.com/mongoose\""
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2462,
+    "content": "\"node_modules/mongoose/node_modules/mongodb\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2464,
+    "content": "\"resolved\": \"https://registry.npmjs.org/mongodb/-/mongodb-7.2.0.tgz\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2468,
+    "content": "\"@mongodb-js/saslprep\": \"^1.3.0\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2470,
+    "content": "\"mongodb-connection-string-url\": \"^7.0.0\""
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2477,
+    "content": "\"@mongodb-js/zstd\": \"^7.0.0\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2480,
+    "content": "\"mongodb-client-encryption\": \">=7.0.0 <7.1.0\","
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2488,
+    "content": "\"@mongodb-js/zstd\": {"
+  },
+  {
+    "file": "backend\\package-lock.json",
+    "line": 2497,
+    "content": "\"mongodb-client-encryption\": {"
+  },
+  {
+    "file": "backend\\package.json",
+    "line": 19,
+    "content": "\"mongoose\": \"^9.7.4\","
+  },
+  {
+    "file": "backend\\routes\\authRoutes.js",
+    "line": 8,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\routes\\authRoutes.js",
+    "line": 9,
+    "content": "const users = await mongoose.model('User').find({});"
+  },
+  {
+    "file": "backend\\routes\\feedbackRoutes.js",
+    "line": 21,
+    "content": "// providing a safety net if MongoDB TTL hasn't run yet."
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 43,
+    "content": "// Only 1 student found, require password (DOB)"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 47,
+    "content": "requiresPassword: true,"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 60,
+    "content": "const { studentId, password } = req.body;"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 62,
+    "content": "if (!studentId || !password) {"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 63,
+    "content": "return res.status(400).json({ message: 'Student ID and Password are required' });"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 73,
+    "content": "return res.status(401).json({ message: 'Invalid password' });"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 76,
+    "content": "// Verify Password (DOB in DDMMYYYY format)"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 101,
+    "content": "const expectedPassword1 = `${day}${month}${year}`;"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 102,
+    "content": "const expectedPassword2 = `${month}${day}${year}`;"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 104,
+    "content": "if (password !== expectedPassword1 && password !== expectedPassword2) {"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 105,
+    "content": "return res.status(401).json({ message: 'Invalid password' });"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 143,
+    "content": "const { identifier, mobileNumber, password } = req.body;"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 146,
+    "content": "if (!loginId || !password) {"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 147,
+    "content": "return res.status(400).json({ message: 'Login ID and Password are required' });"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 161,
+    "content": "// For simplicity if multiple siblings share mobile, we check all of them against password"
+  },
+  {
+    "file": "backend\\routes\\studentPortalRoutes.js",
+    "line": 181,
+    "content": "if (password === p1 || password === p2) {"
+  },
+  {
+    "file": "backend\\scratch\\check_standards.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scratch\\check_standards.js",
+    "line": 8,
+    "content": "await mongoose.connect(process.env.MONGO_URI);"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 15,
+    "content": "console.log(\"Connecting to MongoDB...\");"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 16,
+    "content": "// Assuming the app uses process.env.MONGODB_URI or defaults"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 17,
+    "content": "await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/school_db');"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 18,
+    "content": "console.log(\"Connected to MongoDB.\");"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 47,
+    "content": "// Mark as modified so mongoose saves the array"
+  },
+  {
+    "file": "backend\\scratch\\cleanup_duplicates.js",
+    "line": 66,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 2,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 7,
+    "content": "const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/edupulse';"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 8,
+    "content": "await mongoose.connect(uri);"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 9,
+    "content": "console.log('Connected to MongoDB');"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 31,
+    "content": "// Creating new index explicitly (Mongoose handles it on startup, but we do it here just in case)"
+  },
+  {
+    "file": "backend\\scratch\\migrate_attendance_index.js",
+    "line": 42,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 5,
+    "content": "const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/edupulse';"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 9,
+    "content": "console.log('Connecting to MongoDB...');"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 10,
+    "content": "await mongoose.connect(MONGO_URI);"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 11,
+    "content": "console.log(`Connected to Database: ${mongoose.connection.name}`);"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 13,
+    "content": "if (mongoose.connection.name !== 'edupulse') {"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 14,
+    "content": "throw new Error(`Connected to wrong database: ${mongoose.connection.name}. Expected 'edupulse'.`);"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 17,
+    "content": "const db = mongoose.connection.db;"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 66,
+    "content": "console.log('\\nVERIFIED: MongoDB TTL will no longer physically delete expired Student Feedback.');"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 73,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\scripts\\audit_feedback_indexes.js",
+    "line": 74,
+    "content": "console.log('\\nDisconnected from MongoDB');"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 2,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 5,
+    "content": "const MONGO_URI = process.env.MONGO_URI;"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 6,
+    "content": "if (!MONGO_URI) {"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 7,
+    "content": "console.error('ERROR: MONGO_URI environment variable is missing.');"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 12,
+    "content": "await mongoose.connect(MONGO_URI);"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 13,
+    "content": "const dbName = mongoose.connection.name;"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 22,
+    "content": "const collections = await mongoose.connection.db.listCollections().toArray();"
+  },
+  {
+    "file": "backend\\scripts\\check_database.js",
+    "line": 46,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 2,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 13,
+    "content": "console.log('   STARTING MONGODB MIGRATION: test -> edupulse');"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 16,
+    "content": "// The cluster URI from the environment (e.g. mongodb+srv://user:pass@cluster.mongodb.net)"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 17,
+    "content": "const baseUri = process.env.MONGO_URI;"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 20,
+    "content": "console.error('ERROR: MONGO_URI is not set in the environment variables.');"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 21,
+    "content": "console.error('Please set MONGO_URI to your cluster connection string (without the database name attached).');"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 26,
+    "content": "// e.g. if it's mongodb+srv://cluster/edupulse, we need to extract the base to connect to test and edupulse"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 28,
+    "content": "const match = baseUri.match(/(mongodb(?:\\+srv)?:\\/\\/[^/]+)\\/([^?]+)?(.*)/);"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 43,
+    "content": "const testConnection = await mongoose.createConnection(testUri).asPromise();"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 45,
+    "content": "const edupulseConnection = await mongoose.createConnection(edupulseUri).asPromise();"
+  },
+  {
+    "file": "backend\\scripts\\migrate_test_to_edupulse.js",
+    "line": 152,
+    "content": "console.log(`   MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/edupulse?retryWrites=true&w=majority`);"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 3,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 72,
+    "content": "const isConnected = mongoose.connection.readyState === 1;"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 75,
+    "content": "database: mongoose.connection.name || 'unknown',"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 82,
+    "content": "const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/edupulse';"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 84,
+    "content": "mongoose.connect(MONGO_URI)"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 88,
+    "content": "console.error(`\\nERROR: Application connected to the wrong MongoDB database.`);"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 93,
+    "content": "console.log(`MongoDB connected successfully`);"
+  },
+  {
+    "file": "backend\\server.js",
+    "line": 97,
+    "content": "console.error('MongoDB connection error:', err);"
+  },
+  {
+    "file": "backend\\test_feedback.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\test_feedback.js",
+    "line": 8,
+    "content": "await mongoose.connect(process.env.MONGO_URI);"
+  },
+  {
+    "file": "backend\\test_feedback.js",
+    "line": 12,
+    "content": "studentId: new mongoose.Types.ObjectId(),"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 7,
+    "content": "await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/edupulse');"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 8,
+    "content": "console.log('Connected to MongoDB');"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 11,
+    "content": "const fakeStudentId = new mongoose.Types.ObjectId();"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 32,
+    "content": "const adminUserId = new mongoose.Types.ObjectId();"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 56,
+    "content": "console.log(`5. Still exists in MongoDB? ${dbCheck !== null}`);"
+  },
+  {
+    "file": "backend\\test_soft_delete_feedback.js",
+    "line": 68,
+    "content": "await mongoose.disconnect();"
+  },
+  {
+    "file": "backend\\updateUser.js",
+    "line": 1,
+    "content": "const mongoose = require('mongoose');"
+  },
+  {
+    "file": "backend\\updateUser.js",
+    "line": 4,
+    "content": "mongoose.connect(process.env.MONGODB_URI).then(async () => {"
+  },
+  {
+    "file": "cors.json",
+    "line": 6,
+    "content": "\"http://localhost:5173\","
+  },
+  {
+    "file": "cors.json",
+    "line": 7,
+    "content": "\"http://localhost:5174\","
+  },
+  {
+    "file": "cors.json",
+    "line": 8,
+    "content": "\"http://localhost:5000\","
+  },
+  {
+    "file": "cors.json",
+    "line": 9,
+    "content": "\"http://localhost:3000\""
+  },
+  {
+    "file": "frontend\\src\\components\\ui\\DeveloperProfile.jsx",
+    "line": 16,
+    "content": "'Node.js', 'Express.js', 'Python', 'MongoDB',"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 4,
+    "content": "signInWithEmailAndPassword,"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 5,
+    "content": "createUserWithEmailAndPassword,"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 9,
+    "content": "sendPasswordResetEmail,"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 23,
+    "content": "const [dbUser, setDbUser] = useState(null); // The MongoDB profile (contains status/role)"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 26,
+    "content": "// Sync Firebase User with MongoDB"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 33,
+    "content": "console.warn(\"User profile not found in MongoDB. Auto-syncing...\");"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 36,
+    "content": "console.error(\"Failed to fetch MongoDB user profile\", err);"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 66,
+    "content": "const login = async (email, password) => {"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 67,
+    "content": "const userCredential = await signInWithEmailAndPassword(auth, email, password);"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 80,
+    "content": "const register = async (email, password, name) => {"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 81,
+    "content": "const userCredential = await createUserWithEmailAndPassword(auth, email, password);"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 128,
+    "content": "const resetPassword = (email) => {"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 129,
+    "content": "return sendPasswordResetEmail(auth, email);"
+  },
+  {
+    "file": "frontend\\src\\context\\AuthContext.jsx",
+    "line": 139,
+    "content": "resetPassword"
+  },
+  {
+    "file": "frontend\\src\\lib\\api.js",
+    "line": 4,
+    "content": "const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "frontend\\src\\pages\\Attendance.jsx",
+    "line": 39,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';"
+  },
+  {
+    "file": "frontend\\src\\pages\\Circulars.jsx",
+    "line": 81,
+    "content": "// Note: Be aware of 16MB MongoDB limit. Usually fine for typical announcements"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 10,
+    "content": "const [password, setPassword] = useState('');"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 18,
+    "content": "const { currentUser, login, loginWithGoogle, logout, resetPassword } = useAuth();"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 37,
+    "content": "await login(email.trim(), password);"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 63,
+    "content": "errorMsg = 'Invalid email or password. Please check your credentials.';"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 66,
+    "content": "} else if (err.code === 'auth/wrong-password') {"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 67,
+    "content": "errorMsg = 'Incorrect password.';"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 108,
+    "content": "const handleResetPassword = async () => {"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 111,
+    "content": "setError('Please type your email address into the box first to reset your password.');"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 125,
+    "content": "// 'unknown' means the email isn't in MongoDB yet, so we assume it doesn't match the required role."
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 136,
+    "content": "await resetPassword(trimmedEmail);"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 137,
+    "content": "setMessage('Password reset email sent! Check your inbox.');"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 216,
+    "content": "placeholder=\"admin@school.edu\""
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 223,
+    "content": "<label className=\"block text-xs font-bold uppercase tracking-widest text-[#CDD3C6]\">Password</label>"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 226,
+    "content": "onClick={handleResetPassword}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 230,
+    "content": "{resetting ? 'Sending...' : 'Forgot Password?'}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 234,
+    "content": "type=\"password\""
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 236,
+    "content": "value={password}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 237,
+    "content": "onChange={(e) => setPassword(e.target.value)}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Login.jsx",
+    "line": 240,
+    "content": "autoComplete=\"new-password\""
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 10,
+    "content": "const [password, setPassword] = useState('');"
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 30,
+    "content": "await register(email, password, name);"
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 100,
+    "content": "<label className=\"block text-xs font-bold uppercase tracking-widest text-[#CDD3C6]\">Password</label>"
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 102,
+    "content": "type=\"password\""
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 104,
+    "content": "value={password}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 105,
+    "content": "onChange={(e) => setPassword(e.target.value)}"
+  },
+  {
+    "file": "frontend\\src\\pages\\Register.jsx",
+    "line": 108,
+    "content": "autoComplete=\"new-password\""
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 45,
+    "content": "const [addPassword, setAddPassword] = useState('');"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 46,
+    "content": "const [showAddPassword, setShowAddPassword] = useState(false);"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 72,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 94,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 168,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 191,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 216,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 219,
+    "content": "password: addPassword"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 226,
+    "content": "setAddPassword('');"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 629,
+    "content": "<label className=\"block text-sm font-semibold text-gray-700 mb-1.5\">Password</label>"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 632,
+    "content": "type={showAddPassword ? \"text\" : \"password\"}"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 636,
+    "content": "value={addPassword}"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 637,
+    "content": "onChange={(e) => setAddPassword(e.target.value)}"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 642,
+    "content": "onClick={() => setShowAddPassword(!showAddPassword)}"
+  },
+  {
+    "file": "student-frontend\\src\\components\\layout\\StudentLayout.jsx",
+    "line": 645,
+    "content": "{showAddPassword ? <EyeOff className=\"w-5 h-5\" /> : <Eye className=\"w-5 h-5\" />}"
+  },
+  {
+    "file": "student-frontend\\src\\components\\ui\\DeveloperProfile.jsx",
+    "line": 16,
+    "content": "'Node.js', 'Express.js', 'Python', 'MongoDB',"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Attendance.jsx",
+    "line": 16,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Attendance.jsx",
+    "line": 35,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Dashboard.jsx",
+    "line": 17,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Feedback.jsx",
+    "line": 134,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Homework.jsx",
+    "line": 43,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 9,
+    "content": "const [showPassword, setShowPassword] = useState(false);"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 13,
+    "content": "const [requiresPassword, setRequiresPassword] = useState(false);"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 37,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 45,
+    "content": "} else if (response.data.requiresPassword) {"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 46,
+    "content": "setRequiresPassword(true);"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 61,
+    "content": "setRequiresPassword(true);"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 64,
+    "content": "const handleVerifyPassword = async (e) => {"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 74,
+    "content": "setError('Password must be exactly 8 digits.');"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 79,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 83,
+    "content": "password: dob"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 91,
+    "content": "setError(err.response?.data?.message || 'Invalid password');"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 145,
+    "content": ") : requiresPassword ? ("
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 151,
+    "content": "<h2 className=\"text-2xl font-bold text-gray-900 tracking-tight\">Enter Password</h2>"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 155,
+    "content": "<form onSubmit={handleVerifyPassword} className=\"space-y-6\">"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 158,
+    "content": "Enter Password"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 163,
+    "content": "type={showPassword ? 'text' : 'password'}"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 178,
+    "content": "onClick={() => setShowPassword(!showPassword)}"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 182,
+    "content": "{showPassword ? <EyeOff className=\"w-5 h-5\" /> : <Eye className=\"w-5 h-5\" />}"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Login.jsx",
+    "line": 208,
+    "content": "setRequiresPassword(false);"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Marks.jsx",
+    "line": 13,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  },
+  {
+    "file": "student-frontend\\src\\pages\\Materials.jsx",
+    "line": 15,
+    "content": "const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';"
+  }
+]

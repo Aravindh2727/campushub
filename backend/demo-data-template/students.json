@@ -1,0 +1,4657 @@
+[
+  {
+    "_id": "S-DEMO001",
+    "emisNumber": "DEMO001",
+    "name": "John Doe",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Richard Doe",
+    "address": "123 Demo Street",
+    "mobileNumber": "9876543210",
+    "terms": []
+  },
+  {
+    "_id": "S-DEMO002",
+    "emisNumber": "DEMO002",
+    "name": "Student DEMO002",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO002",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO003",
+    "emisNumber": "DEMO003",
+    "name": "Student DEMO003",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO003",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO004",
+    "emisNumber": "DEMO004",
+    "name": "Student DEMO004",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO004",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO005",
+    "emisNumber": "DEMO005",
+    "name": "Student DEMO005",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO005",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO006",
+    "emisNumber": "DEMO006",
+    "name": "Student DEMO006",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO006",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO007",
+    "emisNumber": "DEMO007",
+    "name": "Student DEMO007",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO007",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO008",
+    "emisNumber": "DEMO008",
+    "name": "Student DEMO008",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO008",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO009",
+    "emisNumber": "DEMO009",
+    "name": "Student DEMO009",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO009",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO010",
+    "emisNumber": "DEMO010",
+    "name": "Student DEMO010",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO010",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO011",
+    "emisNumber": "DEMO011",
+    "name": "Student DEMO011",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO011",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO012",
+    "emisNumber": "DEMO012",
+    "name": "Student DEMO012",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO012",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO013",
+    "emisNumber": "DEMO013",
+    "name": "Student DEMO013",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO013",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO014",
+    "emisNumber": "DEMO014",
+    "name": "Student DEMO014",
+    "standard": "6",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO014",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO015",
+    "emisNumber": "DEMO015",
+    "name": "Student DEMO015",
+    "standard": "6",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO015",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO016",
+    "emisNumber": "DEMO016",
+    "name": "Student DEMO016",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO016",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO017",
+    "emisNumber": "DEMO017",
+    "name": "Student DEMO017",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO017",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO018",
+    "emisNumber": "DEMO018",
+    "name": "Student DEMO018",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO018",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO019",
+    "emisNumber": "DEMO019",
+    "name": "Student DEMO019",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO019",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO020",
+    "emisNumber": "DEMO020",
+    "name": "Student DEMO020",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO020",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO021",
+    "emisNumber": "DEMO021",
+    "name": "Student DEMO021",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO021",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO022",
+    "emisNumber": "DEMO022",
+    "name": "Student DEMO022",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO022",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO023",
+    "emisNumber": "DEMO023",
+    "name": "Student DEMO023",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO023",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO024",
+    "emisNumber": "DEMO024",
+    "name": "Student DEMO024",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO024",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO025",
+    "emisNumber": "DEMO025",
+    "name": "Student DEMO025",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO025",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO026",
+    "emisNumber": "DEMO026",
+    "name": "Student DEMO026",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO026",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO027",
+    "emisNumber": "DEMO027",
+    "name": "Student DEMO027",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO027",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO028",
+    "emisNumber": "DEMO028",
+    "name": "Student DEMO028",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO028",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO029",
+    "emisNumber": "DEMO029",
+    "name": "Student DEMO029",
+    "standard": "6",
+    "section": "B",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO029",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO030",
+    "emisNumber": "DEMO030",
+    "name": "Student DEMO030",
+    "standard": "6",
+    "section": "B",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO030",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO031",
+    "emisNumber": "DEMO031",
+    "name": "Student DEMO031",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO031",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO032",
+    "emisNumber": "DEMO032",
+    "name": "Student DEMO032",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO032",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO033",
+    "emisNumber": "DEMO033",
+    "name": "Student DEMO033",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO033",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO034",
+    "emisNumber": "DEMO034",
+    "name": "Student DEMO034",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO034",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO035",
+    "emisNumber": "DEMO035",
+    "name": "Student DEMO035",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO035",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO036",
+    "emisNumber": "DEMO036",
+    "name": "Student DEMO036",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO036",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO037",
+    "emisNumber": "DEMO037",
+    "name": "Student DEMO037",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO037",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO038",
+    "emisNumber": "DEMO038",
+    "name": "Student DEMO038",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO038",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO039",
+    "emisNumber": "DEMO039",
+    "name": "Student DEMO039",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO039",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO040",
+    "emisNumber": "DEMO040",
+    "name": "Student DEMO040",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO040",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO041",
+    "emisNumber": "DEMO041",
+    "name": "Student DEMO041",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO041",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO042",
+    "emisNumber": "DEMO042",
+    "name": "Student DEMO042",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO042",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO043",
+    "emisNumber": "DEMO043",
+    "name": "Student DEMO043",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO043",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO044",
+    "emisNumber": "DEMO044",
+    "name": "Student DEMO044",
+    "standard": "7",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO044",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO045",
+    "emisNumber": "DEMO045",
+    "name": "Student DEMO045",
+    "standard": "7",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO045",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO046",
+    "emisNumber": "DEMO046",
+    "name": "Student DEMO046",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO046",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO047",
+    "emisNumber": "DEMO047",
+    "name": "Student DEMO047",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO047",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO048",
+    "emisNumber": "DEMO048",
+    "name": "Student DEMO048",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO048",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO049",
+    "emisNumber": "DEMO049",
+    "name": "Student DEMO049",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO049",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO050",
+    "emisNumber": "DEMO050",
+    "name": "Student DEMO050",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO050",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO051",
+    "emisNumber": "DEMO051",
+    "name": "Student DEMO051",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO051",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO052",
+    "emisNumber": "DEMO052",
+    "name": "Student DEMO052",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO052",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO053",
+    "emisNumber": "DEMO053",
+    "name": "Student DEMO053",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO053",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO054",
+    "emisNumber": "DEMO054",
+    "name": "Student DEMO054",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO054",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO055",
+    "emisNumber": "DEMO055",
+    "name": "Student DEMO055",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO055",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO056",
+    "emisNumber": "DEMO056",
+    "name": "Student DEMO056",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO056",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO057",
+    "emisNumber": "DEMO057",
+    "name": "Student DEMO057",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO057",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO058",
+    "emisNumber": "DEMO058",
+    "name": "Student DEMO058",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO058",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO059",
+    "emisNumber": "DEMO059",
+    "name": "Student DEMO059",
+    "standard": "8",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO059",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO060",
+    "emisNumber": "DEMO060",
+    "name": "Student DEMO060",
+    "standard": "8",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO060",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO061",
+    "emisNumber": "DEMO061",
+    "name": "Student DEMO061",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO061",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO062",
+    "emisNumber": "DEMO062",
+    "name": "Student DEMO062",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO062",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO063",
+    "emisNumber": "DEMO063",
+    "name": "Student DEMO063",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO063",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO064",
+    "emisNumber": "DEMO064",
+    "name": "Student DEMO064",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO064",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO065",
+    "emisNumber": "DEMO065",
+    "name": "Student DEMO065",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO065",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO066",
+    "emisNumber": "DEMO066",
+    "name": "Student DEMO066",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO066",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO067",
+    "emisNumber": "DEMO067",
+    "name": "Student DEMO067",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO067",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO068",
+    "emisNumber": "DEMO068",
+    "name": "Student DEMO068",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO068",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO069",
+    "emisNumber": "DEMO069",
+    "name": "Student DEMO069",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO069",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO070",
+    "emisNumber": "DEMO070",
+    "name": "Student DEMO070",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO070",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO071",
+    "emisNumber": "DEMO071",
+    "name": "Student DEMO071",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO071",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO072",
+    "emisNumber": "DEMO072",
+    "name": "Student DEMO072",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO072",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO073",
+    "emisNumber": "DEMO073",
+    "name": "Student DEMO073",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO073",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO074",
+    "emisNumber": "DEMO074",
+    "name": "Student DEMO074",
+    "standard": "9",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO074",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO075",
+    "emisNumber": "DEMO075",
+    "name": "Student DEMO075",
+    "standard": "9",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO075",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO076",
+    "emisNumber": "DEMO076",
+    "name": "Student DEMO076",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO076",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO077",
+    "emisNumber": "DEMO077",
+    "name": "Student DEMO077",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO077",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO078",
+    "emisNumber": "DEMO078",
+    "name": "Student DEMO078",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO078",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO079",
+    "emisNumber": "DEMO079",
+    "name": "Student DEMO079",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO079",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO080",
+    "emisNumber": "DEMO080",
+    "name": "Student DEMO080",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO080",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO081",
+    "emisNumber": "DEMO081",
+    "name": "Student DEMO081",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO081",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO082",
+    "emisNumber": "DEMO082",
+    "name": "Student DEMO082",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO082",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO083",
+    "emisNumber": "DEMO083",
+    "name": "Student DEMO083",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO083",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO084",
+    "emisNumber": "DEMO084",
+    "name": "Student DEMO084",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO084",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO085",
+    "emisNumber": "DEMO085",
+    "name": "Student DEMO085",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO085",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO086",
+    "emisNumber": "DEMO086",
+    "name": "Student DEMO086",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO086",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO087",
+    "emisNumber": "DEMO087",
+    "name": "Student DEMO087",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO087",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO088",
+    "emisNumber": "DEMO088",
+    "name": "Student DEMO088",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO088",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO089",
+    "emisNumber": "DEMO089",
+    "name": "Student DEMO089",
+    "standard": "10",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO089",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO090",
+    "emisNumber": "DEMO090",
+    "name": "Student DEMO090",
+    "standard": "10",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO090",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO091",
+    "emisNumber": "DEMO091",
+    "name": "Student DEMO091",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO091",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO092",
+    "emisNumber": "DEMO092",
+    "name": "Student DEMO092",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO092",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO093",
+    "emisNumber": "DEMO093",
+    "name": "Student DEMO093",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO093",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO094",
+    "emisNumber": "DEMO094",
+    "name": "Student DEMO094",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO094",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO095",
+    "emisNumber": "DEMO095",
+    "name": "Student DEMO095",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO095",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO096",
+    "emisNumber": "DEMO096",
+    "name": "Student DEMO096",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO096",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO097",
+    "emisNumber": "DEMO097",
+    "name": "Student DEMO097",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO097",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO098",
+    "emisNumber": "DEMO098",
+    "name": "Student DEMO098",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO098",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO099",
+    "emisNumber": "DEMO099",
+    "name": "Student DEMO099",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO099",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO100",
+    "emisNumber": "DEMO100",
+    "name": "Student DEMO100",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO100",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO101",
+    "emisNumber": "DEMO101",
+    "name": "Student DEMO101",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO101",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO102",
+    "emisNumber": "DEMO102",
+    "name": "Student DEMO102",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO102",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO103",
+    "emisNumber": "DEMO103",
+    "name": "Student DEMO103",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO103",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO104",
+    "emisNumber": "DEMO104",
+    "name": "Student DEMO104",
+    "standard": "11",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO104",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO105",
+    "emisNumber": "DEMO105",
+    "name": "Student DEMO105",
+    "standard": "11",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO105",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO106",
+    "emisNumber": "DEMO106",
+    "name": "Student DEMO106",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO106",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 75
+          },
+          {
+            "subject": "English",
+            "score": 80
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 70
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO107",
+    "emisNumber": "DEMO107",
+    "name": "Student DEMO107",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO107",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 76
+          },
+          {
+            "subject": "English",
+            "score": 81
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 71
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO108",
+    "emisNumber": "DEMO108",
+    "name": "Student DEMO108",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO108",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 77
+          },
+          {
+            "subject": "English",
+            "score": 82
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 72
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO109",
+    "emisNumber": "DEMO109",
+    "name": "Student DEMO109",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO109",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 78
+          },
+          {
+            "subject": "English",
+            "score": 83
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 73
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO110",
+    "emisNumber": "DEMO110",
+    "name": "Student DEMO110",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO110",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 79
+          },
+          {
+            "subject": "English",
+            "score": 84
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 74
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO111",
+    "emisNumber": "DEMO111",
+    "name": "Student DEMO111",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO111",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 80
+          },
+          {
+            "subject": "English",
+            "score": 85
+          },
+          {
+            "subject": "Mathematics",
+            "score": 90
+          },
+          {
+            "subject": "Science",
+            "score": 75
+          },
+          {
+            "subject": "Social Science",
+            "score": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO112",
+    "emisNumber": "DEMO112",
+    "name": "Student DEMO112",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO112",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 81
+          },
+          {
+            "subject": "English",
+            "score": 86
+          },
+          {
+            "subject": "Mathematics",
+            "score": 91
+          },
+          {
+            "subject": "Science",
+            "score": 76
+          },
+          {
+            "subject": "Social Science",
+            "score": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO113",
+    "emisNumber": "DEMO113",
+    "name": "Student DEMO113",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO113",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 82
+          },
+          {
+            "subject": "English",
+            "score": 87
+          },
+          {
+            "subject": "Mathematics",
+            "score": 92
+          },
+          {
+            "subject": "Science",
+            "score": 77
+          },
+          {
+            "subject": "Social Science",
+            "score": 83
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO114",
+    "emisNumber": "DEMO114",
+    "name": "Student DEMO114",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO114",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 83
+          },
+          {
+            "subject": "English",
+            "score": 88
+          },
+          {
+            "subject": "Mathematics",
+            "score": 93
+          },
+          {
+            "subject": "Science",
+            "score": 78
+          },
+          {
+            "subject": "Social Science",
+            "score": 82
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO115",
+    "emisNumber": "DEMO115",
+    "name": "Student DEMO115",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO115",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 84
+          },
+          {
+            "subject": "English",
+            "score": 89
+          },
+          {
+            "subject": "Mathematics",
+            "score": 94
+          },
+          {
+            "subject": "Science",
+            "score": 79
+          },
+          {
+            "subject": "Social Science",
+            "score": 81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO116",
+    "emisNumber": "DEMO116",
+    "name": "Student DEMO116",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO116",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 85
+          },
+          {
+            "subject": "English",
+            "score": 90
+          },
+          {
+            "subject": "Mathematics",
+            "score": 85
+          },
+          {
+            "subject": "Science",
+            "score": 80
+          },
+          {
+            "subject": "Social Science",
+            "score": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO117",
+    "emisNumber": "DEMO117",
+    "name": "Student DEMO117",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO117",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 86
+          },
+          {
+            "subject": "English",
+            "score": 91
+          },
+          {
+            "subject": "Mathematics",
+            "score": 86
+          },
+          {
+            "subject": "Science",
+            "score": 81
+          },
+          {
+            "subject": "Social Science",
+            "score": 89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO118",
+    "emisNumber": "DEMO118",
+    "name": "Student DEMO118",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO118",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 87
+          },
+          {
+            "subject": "English",
+            "score": 92
+          },
+          {
+            "subject": "Mathematics",
+            "score": 87
+          },
+          {
+            "subject": "Science",
+            "score": 82
+          },
+          {
+            "subject": "Social Science",
+            "score": 88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO119",
+    "emisNumber": "DEMO119",
+    "name": "Student DEMO119",
+    "standard": "12",
+    "section": "A",
+    "gender": "Female",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO119",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 88
+          },
+          {
+            "subject": "English",
+            "score": 93
+          },
+          {
+            "subject": "Mathematics",
+            "score": 88
+          },
+          {
+            "subject": "Science",
+            "score": 83
+          },
+          {
+            "subject": "Social Science",
+            "score": 87
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "S-DEMO120",
+    "emisNumber": "DEMO120",
+    "name": "Student DEMO120",
+    "standard": "12",
+    "section": "A",
+    "gender": "Male",
+    "medium": "English",
+    "dob": "15052012",
+    "fatherName": "Father DEMO120",
+    "mobileNumber": "9999999999",
+    "terms": [
+      {
+        "termName": "MidTerm 1",
+        "marks": [
+          {
+            "subject": "Tamil",
+            "score": 89
+          },
+          {
+            "subject": "English",
+            "score": 94
+          },
+          {
+            "subject": "Mathematics",
+            "score": 89
+          },
+          {
+            "subject": "Science",
+            "score": 84
+          },
+          {
+            "subject": "Social Science",
+            "score": 86
+          }
+        ]
+      }
+    ]
+  }
+]

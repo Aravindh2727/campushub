@@ -1,0 +1,124 @@
+[
+  {
+    "_id": "cls-6a",
+    "standard": "6",
+    "section": "A",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T001"
+  },
+  {
+    "_id": "cls-6b",
+    "standard": "6",
+    "section": "B",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T002"
+  },
+  {
+    "_id": "cls-7a",
+    "standard": "7",
+    "section": "A",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T003"
+  },
+  {
+    "_id": "cls-8a",
+    "standard": "8",
+    "section": "A",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T004"
+  },
+  {
+    "_id": "cls-9a",
+    "standard": "9",
+    "section": "A",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T005"
+  },
+  {
+    "_id": "cls-10a",
+    "standard": "10",
+    "section": "A",
+    "stream": "General",
+    "group": "",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Science",
+      "Social Science"
+    ],
+    "classTeacher": "T006"
+  },
+  {
+    "_id": "cls-11a",
+    "standard": "11",
+    "section": "A",
+    "stream": "HSC",
+    "group": "Bio-Maths",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology"
+    ],
+    "classTeacher": "T007"
+  },
+  {
+    "_id": "cls-12a",
+    "standard": "12",
+    "section": "A",
+    "stream": "HSC",
+    "group": "Computer Science",
+    "subjects": [
+      "Tamil",
+      "English",
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Computer Science"
+    ],
+    "classTeacher": "T008"
+  }
+]

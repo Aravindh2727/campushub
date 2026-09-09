@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white min-h-screen font-sans;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(109, 40, 217, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(2, 132, 199, 0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#4C677C]/30 dark:bg-white/20 rounded-full hover:bg-[#62D4CA] dark:hover:bg-[#62D4CA]/80 transition-colors;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-certificate, .print-certificate * {
+    visibility: visible;
+  }
+  .print-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block !important;
+  }
+  @page {
+    size: auto;
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Premium Light Theme & Dark Glassmorphism */
+  .glass-card {
+    @apply bg-white border border-[#E5D9C4] rounded-3xl shadow-sm dark:bg-glass dark:backdrop-blur-md dark:border-glassBorder dark:rounded-2xl dark:shadow-glass transition-all duration-300;
+  }
+  
+  .glass-input {
+    @apply bg-[#F2FCFA] border border-[#E5D9C4] rounded-xl px-4 py-3 text-[#2E1C40] placeholder-[#4C677C]/60 focus:outline-none focus:ring-2 focus:ring-[#62D4CA] focus:bg-white focus:shadow-md transition-all duration-300 dark:bg-black/20 dark:border-white/10 dark:rounded-lg dark:px-4 dark:py-2 dark:text-white dark:placeholder-white/40 dark:focus:ring-primaryGlow dark:focus:shadow-none;
+  }
+  
+  .glass-button {
+    @apply bg-white border border-[#E5D9C4] rounded-xl px-4 py-2 font-semibold text-[#4C677C] hover:bg-[#D8FDF6]/50 hover:border-[#62D4CA]/50 hover:text-[#2E1C40] hover:shadow-sm transition-all duration-300 dark:bg-white/5 dark:border-white/10 dark:rounded-lg dark:text-white dark:font-medium dark:hover:bg-white/10 dark:hover:shadow-neon dark:text-white dark:hover:border-white/10;
+  }
+  
+  .glass-button-primary {
+    @apply bg-[#62D4CA] text-[#2E1C40] hover:bg-[#4C677C] hover:text-[#E5D9C4] rounded-xl px-4 py-2 font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 dark:shadow-[0_0_15px_rgba(84,198,190,0.3)] dark:hover:shadow-[0_0_25px_rgba(84,198,190,0.5)];
+  }
+}

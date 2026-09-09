@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "U-ADMIN",
+    "uid": "demo-admin-uid",
+    "role": "admin",
+    "email": "admin@demo.com",
+    "name": "Demo Admin",
+    "isActive": true
+  },
+  {
+    "_id": "T001",
+    "uid": "demo-teacher-001",
+    "role": "teacher",
+    "email": "teacher@demo.com",
+    "name": "Sarah Connor",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "6",
+        "section": "A",
+        "subject": "English",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "6",
+        "section": "B",
+        "subject": "English",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T002",
+    "uid": "demo-teacher-002",
+    "role": "teacher",
+    "email": "maths.teacher@demo.com",
+    "name": "Alan Turing",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "6",
+        "section": "B",
+        "subject": "Mathematics",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "7",
+        "section": "A",
+        "subject": "Mathematics",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T003",
+    "uid": "demo-teacher-003",
+    "role": "teacher",
+    "email": "science.teacher@demo.com",
+    "name": "Marie Curie",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "7",
+        "section": "A",
+        "subject": "Science",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "8",
+        "section": "A",
+        "subject": "Science",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T004",
+    "uid": "demo-teacher-004",
+    "role": "teacher",
+    "email": "history.teacher@demo.com",
+    "name": "Herodotus",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "8",
+        "section": "A",
+        "subject": "Social Science",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "9",
+        "section": "A",
+        "subject": "Social Science",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T005",
+    "uid": "demo-teacher-005",
+    "role": "teacher",
+    "email": "tamil.teacher@demo.com",
+    "name": "Thiruvalluvar",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "9",
+        "section": "A",
+        "subject": "Tamil",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "10",
+        "section": "A",
+        "subject": "Tamil",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T006",
+    "uid": "demo-teacher-006",
+    "role": "teacher",
+    "email": "physics.teacher@demo.com",
+    "name": "Albert Einstein",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "10",
+        "section": "A",
+        "subject": "Science",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "11",
+        "section": "A",
+        "subject": "Physics",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T007",
+    "uid": "demo-teacher-007",
+    "role": "teacher",
+    "email": "bio.teacher@demo.com",
+    "name": "Charles Darwin",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "11",
+        "section": "A",
+        "subject": "Biology",
+        "accessLevel": "edit"
+      },
+      {
+        "standard": "12",
+        "section": "A",
+        "subject": "Biology",
+        "accessLevel": "edit"
+      }
+    ]
+  },
+  {
+    "_id": "T008",
+    "uid": "demo-teacher-008",
+    "role": "teacher",
+    "email": "cs.teacher@demo.com",
+    "name": "Ada Lovelace",
+    "isActive": true,
+    "assignedClasses": [
+      {
+        "standard": "12",
+        "section": "A",
+        "subject": "Computer Science",
+        "accessLevel": "edit"
+      }
+    ]
+  }
+]

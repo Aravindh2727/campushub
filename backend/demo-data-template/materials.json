@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "MAT001",
+    "standard": "6",
+    "section": "A",
+    "subject": "English",
+    "title": "Grammar Notes - Nouns",
+    "type": "document",
+    "url": "https://example.com/demo.pdf",
+    "uploadedBy": "T001",
+    "createdAt": "2026-09-09T15:43:53.907Z"
+  },
+  {
+    "_id": "MAT002",
+    "standard": "12",
+    "section": "A",
+    "subject": "Computer Science",
+    "title": "Python Basics PPT",
+    "type": "presentation",
+    "url": "https://example.com/demo.ppt",
+    "uploadedBy": "T008",
+    "createdAt": "2026-09-09T15:43:53.907Z"
+  }
+]

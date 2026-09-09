@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "HW001",
+    "standard": "6",
+    "section": "A",
+    "subject": "English",
+    "title": "Write an essay on Climate Change",
+    "description": "At least 500 words.",
+    "date": "2026-09-09T15:43:53.907Z",
+    "teacherId": "T001"
+  },
+  {
+    "_id": "HW002",
+    "standard": "6",
+    "section": "A",
+    "subject": "Mathematics",
+    "title": "Algebra Exercises",
+    "description": "Chapter 5, Q1 to Q10",
+    "date": "2026-09-09T15:43:53.907Z",
+    "teacherId": "T002"
+  },
+  {
+    "_id": "HW003",
+    "standard": "10",
+    "section": "A",
+    "subject": "Science",
+    "title": "Periodic Table Revision",
+    "description": "Memorize first 20 elements",
+    "date": "2026-09-09T15:43:53.907Z",
+    "teacherId": "T006"
+  }
+]

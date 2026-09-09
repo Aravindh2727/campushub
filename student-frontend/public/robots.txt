@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /dashboard
+Allow: /marks
+Allow: /homework
+Allow: /attendance
+Allow: /materials
+
+# Disallow private/internal session paths
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://dadapuram-student-portal.onrender.com/sitemap.xml

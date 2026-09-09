@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "CIR001",
+    "title": "Annual Sports Day 2026",
+    "content": "The Annual Sports Day will be held next Friday. All students must participate.",
+    "date": "2026-09-09T15:43:53.908Z",
+    "targetAudience": "All",
+    "author": "U-ADMIN"
+  },
+  {
+    "_id": "CIR002",
+    "title": "Parent Teacher Meeting",
+    "content": "PTM for Grade 6 to 8 is scheduled for Saturday.",
+    "date": "2026-09-09T15:43:53.908Z",
+    "targetAudience": "Students",
+    "author": "U-ADMIN"
+  }
+]

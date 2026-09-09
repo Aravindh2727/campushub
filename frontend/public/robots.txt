@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /login
+Allow: /register
+
+# Disallow private/internal session paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /teacher/
+
+# Sitemaps
+Sitemap: https://dadapuram-frontend.onrender.com/sitemap.xml

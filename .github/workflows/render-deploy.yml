@@ -1,0 +1,18 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Trigger Render Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Backend Deploy Hook
+        run: curl -X POST "https://api.render.com/deploy/srv-d9c9g8b7uimc73d2bj5g?key=DPvmepQX4jQ"
+      - name: Trigger Student Portal Deploy Hook
+        run: curl -X POST "https://api.render.com/deploy/srv-d9d4u1navr4c738ba2mg?key=RdvUJ0cPfyc"
+      - name: Trigger Teacher Frontend Deploy Hook
+        run: curl -X POST "https://api.render.com/deploy/srv-d9bug7favr4c73bbule0?key=Oo61bvit8Wo"
