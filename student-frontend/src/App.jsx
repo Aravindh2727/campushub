@@ -8,7 +8,7 @@ import Attendance from './pages/Attendance';
 import Materials from './pages/Materials';
 import Feedback from './pages/Feedback';
 import StudentLayout from './components/layout/StudentLayout';
-import { DeveloperProfile } from './components/ui/DeveloperProfile';
+
 import { DeploymentUpdateBanner } from './components/ui/DeploymentUpdateBanner';
 import { appState } from './lib/appState';
 import axios from 'axios';
@@ -64,7 +64,7 @@ function App() {
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/materials" element={<Materials />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/developer-profile" element={<DeveloperProfile />} />
+
         </Route>
         
         <Route path="/" element={<Navigate to="/dashboard" replace />} />

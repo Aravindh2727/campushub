@@ -191,27 +191,6 @@ export function AdminLayout() {
                 <span className="md:hidden whitespace-nowrap overflow-hidden ml-3">My Profile</span>
               )}
             </NavLink>
-            <NavLink 
-              to="developer-profile"
-              onClick={(e) => handleNavClick(e, 'developer-profile')}
-              className={({ isActive }) =>
-                cn(
-                  "flex items-center rounded-xl transition-all duration-300 w-full",
-                  isSidebarOpen ? "gap-3 px-4 py-3.5" : "justify-center p-3.5 mx-auto w-12",
-                  isActive 
-                    ? "bg-adminAccent1 text-white shadow-md font-bold" 
-                    : "text-white/70 hover:bg-white/10 hover:text-white font-medium"
-                )
-              }
-              title={!isSidebarOpen ? "Developer Profile" : undefined}
-            >
-              <Code className={cn("w-5 h-5 flex-shrink-0", !isSidebarOpen && "md:mx-auto")} />
-              {isSidebarOpen ? (
-                <span className="whitespace-nowrap overflow-hidden">Developer Profile</span>
-              ) : (
-                <span className="md:hidden whitespace-nowrap overflow-hidden ml-3">Developer Profile</span>
-              )}
-            </NavLink>
             <button 
               onClick={() => closeSidebarSafely(logout)}
               className={cn(

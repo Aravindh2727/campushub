@@ -340,25 +340,7 @@ export default function StudentLayout() {
               <LogOut className="w-5 h-5 mr-3 flex-shrink-0 opacity-80 group-hover:opacity-100" />
               Logout
             </button>
-            <NavLink
-              to="/developer-profile"
-              onClick={(e) => {
-                if (window.innerWidth < 1024) {
-                  e.preventDefault();
-                  closeSidebarSafely(() => navigate('/developer-profile', { replace: true }));
-                }
-              }}
-              className={({ isActive }) =>
-                `flex items-center w-full px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 group ${
-                  isActive
-                    ? 'bg-indigo-50 text-indigo-700 shadow-sm'
-                    : 'text-gray-600 hover:text-indigo-600 hover:bg-indigo-50'
-                }`
-              }
-            >
-              <Code className="w-5 h-5 mr-3 flex-shrink-0 opacity-80 group-hover:opacity-100" />
-              Developer Profile
-            </NavLink>
+
           </div>
         </div>
       </aside>
@@ -483,18 +465,7 @@ export default function StudentLayout() {
                         Add Student Account
                       </button>
                       
-                      <button 
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setIsProfileDropdownOpen(false);
-                          navigate('/developer-profile');
-                        }}
-                        className="w-full flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-indigo-700 hover:bg-indigo-50 rounded-xl transition-colors cursor-pointer"
-                      >
-                        <Code className="w-4 h-4" />
-                        Developer Profile
-                      </button>
+
                       
                       <button 
                         type="button"

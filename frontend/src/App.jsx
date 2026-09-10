@@ -24,7 +24,7 @@ import { AdminUsers } from './pages/AdminUsers';
 import { AdminClasses } from './pages/AdminClasses';
 import { AdminReports } from './pages/AdminReports';
 import StudentFeedback from './pages/StudentFeedback';
-import { DeveloperProfile } from './components/ui/DeveloperProfile';
+
 import { DeploymentUpdateBanner } from './components/ui/DeploymentUpdateBanner';
 
 import { DataSync } from './pages/DataSync';
@@ -104,7 +104,7 @@ function AppRoutes() {
         <Route path="profile" element={<Profile />} />
         <Route path="ai" element={<AiDashboard />} />
         <Route path="attendance" element={<Attendance />} />
-        <Route path="developer-profile" element={<DeveloperProfile />} />
+
       </Route>
 
       {/* Admin Routes */}
@@ -129,7 +129,7 @@ function AppRoutes() {
         <Route path="ai" element={<AiDashboard />} />
         <Route path="attendance" element={<Attendance />} />
         <Route path="feedback" element={<StudentFeedback />} />
-        <Route path="developer-profile" element={<DeveloperProfile />} />
+
       </Route>
     </Routes>
   );
