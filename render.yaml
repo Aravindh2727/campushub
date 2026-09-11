@@ -1,0 +1,45 @@
+services:
+  # 1. Backend API Service
+  - type: web
+    name: campushub-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: APP_MODE
+        value: demo # Set this to 'production' if you connect real MongoDB and Firebase
+
+  # 2. Main Frontend (Admin/Teacher)
+  - type: web
+    name: campushub-admin-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: campushub-backend
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: VITE_APP_MODE
+        value: demo
+
+  # 3. Student Frontend
+  - type: web
+    name: campushub-student-frontend
+    env: static
+    rootDir: student-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: campushub-backend
+          envVarKey: RENDER_EXTERNAL_URL
+      - key: VITE_APP_MODE
+        value: demo
