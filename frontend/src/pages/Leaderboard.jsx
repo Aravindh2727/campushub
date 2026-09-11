@@ -118,7 +118,28 @@ export function Leaderboard() {
 
   const renderRankIcon = (rank) => {
     switch(rank) {
-      case 1: return <Trophy className="w-8 h-8 text-[#AE634A] drop-shadow-sm" />;
+      case 1: return (
+        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center drop-shadow-md transition-transform hover:scale-110">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M 10 18 C 5 18 2 13 2 8" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+            <path d="M 2 8 Q 3 5 5 7 Q 4 9 2 8 Z" fill="#FBBF24" />
+            <path d="M 3 11 Q 5 8 7 10 Q 6 12 3 11 Z" fill="#FBBF24" />
+            <path d="M 5 14 Q 7 11 9 13 Q 8 15 5 14 Z" fill="#FBBF24" />
+            <path d="M 7 17 Q 9 14 11 16 Q 10 18 7 17 Z" fill="#FBBF24" />
+            <path d="M 14 18 C 19 18 22 13 22 8" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+            <path d="M 22 8 Q 21 5 19 7 Q 20 9 22 8 Z" fill="#FBBF24" />
+            <path d="M 21 11 Q 19 8 17 10 Q 18 12 21 11 Z" fill="#FBBF24" />
+            <path d="M 19 14 Q 17 11 15 13 Q 16 15 19 14 Z" fill="#FBBF24" />
+            <path d="M 17 17 Q 15 14 13 16 Q 14 18 17 17 Z" fill="#FBBF24" />
+            <rect x="7" y="21" width="10" height="2" rx="1" fill="#F59E0B" />
+            <rect x="8" y="17" width="8" height="4" rx="1" fill="#475569" />
+            <rect x="11" y="14" width="2" height="3" fill="#D97706" />
+            <path d="M12 2 l2 6 h6 l-4.8 3.5 1.8 5.5 -5 -3.8 -5 3.8 1.8 -5.5 -4.8 -3.5 h6 z" fill="#FBBF24" stroke="#D97706" strokeWidth="1" strokeLinejoin="round" />
+            <circle cx="12" cy="9.5" r="3.5" fill="#FEF3C7" />
+            <text x="12" y="12.8" fill="#D97706" fontSize="10" fontWeight="900" textAnchor="middle" style={{fontFamily: 'system-ui, sans-serif'}}>1</text>
+          </svg>
+        </div>
+      );
       case 2: return (
         <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center drop-shadow-md transition-transform hover:scale-110">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
