@@ -488,7 +488,12 @@ export default function StudentLayout() {
 
         {/* Page Content */}
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 custom-scrollbar relative z-0">
-          <Outlet context={{ student }} />
+          <div className="min-h-[calc(100%-3rem)]">
+            <Outlet context={{ student }} />
+          </div>
+          <footer className="w-full text-center py-4 text-sm text-gray-500 opacity-70">
+            Developed by ARAVINDH V
+          </footer>
         </main>
       </div>
 

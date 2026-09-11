@@ -182,9 +182,12 @@ export function AdminLayout() {
 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto p-4 md:pl-0 pt-20 md:pt-4 w-full bg-adminBg">
-        <div className="h-full rounded-3xl w-full max-w-full overflow-x-hidden">
+        <div className="rounded-3xl w-full max-w-full overflow-x-hidden min-h-[calc(100%-3rem)]">
           <Outlet />
         </div>
+        <footer className="w-full text-center py-4 text-sm text-gray-500 opacity-70">
+          Developed by ARAVINDH V
+        </footer>
       </main>
     </div>
   );
