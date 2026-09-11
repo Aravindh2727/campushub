@@ -4,7 +4,7 @@ const path = require('path');
 const dataDir = path.join(__dirname, '..', 'demo-data');
 const templateDir = path.join(__dirname, '..', 'demo-data-template');
 
-console.log('--- DGHSS 360 DEMO RESET ---');
+console.log('--- EduSphere 360 DEMO RESET ---');
 
 if (!fs.existsSync(templateDir)) {
     console.error('Error: demo-data-template directory not found. Cannot reset.');

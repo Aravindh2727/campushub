@@ -24,7 +24,7 @@ const askAI = async (req, res) => {
       _id: 0 
     });
 
-    const systemPrompt = `You are an intelligent AI assistant for Dadapuram Government Higher Secondary School.
+    const systemPrompt = `You are an intelligent AI assistant for EduSphere 360.
 You have access to the following JSON data representing the school's students and their academic records (terms and marks):
 
 ${JSON.stringify(students)}
@@ -40,7 +40,7 @@ Instructions:
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'HTTP-Referer': 'https://dadapuram-school.vercel.app', // Required by OpenRouter
-        'X-Title': 'Dadapuram Analytics Dashboard',
+        'X-Title': 'EduSphere 360 Dashboard',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({

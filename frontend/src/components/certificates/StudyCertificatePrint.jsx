@@ -8,7 +8,7 @@ export const StudyCertificatePrint = React.forwardRef(({ student, language = 'TA
   const t = {
     title: isEnglish ? 'STUDY CERTIFICATE' : 'படிப்புச் சான்றிதழ்',
     schoolNameLabel: isEnglish ? 'Name of the School' : 'பள்ளியின் பெயர்',
-    schoolName: isEnglish ? 'Government Hr Sec School, Dadapuram-604207.' : 'அரசு மேல்நிலைப் பள்ளி தாதாபுரம்-604207.',
+    schoolName: isEnglish ? 'EduSphere 360' : 'EduSphere 360',
     schoolCodeLabel: isEnglish ? 'School Code' : 'பள்ளி எண்',
     studentNameLabel: isEnglish ? 'Name of the student' : 'மாணவரின் பெயர்',
     fatherNameLabel: isEnglish ? 'Name of the Father' : 'தந்தையின் பெயர்',

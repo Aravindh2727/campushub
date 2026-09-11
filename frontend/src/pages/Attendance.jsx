@@ -64,12 +64,14 @@ export function Attendance() {
   }, []);
 
   // Extract unique standards
-  const standards = [...new Set(configs.map(c => c.standard))].sort();
+  const standards = isAdmin 
+    ? [...new Set(configs.map(c => c.standard))].sort()
+    : [...new Set((dbUser?.assignedClasses || []).map(c => c.standard))].sort();
+
   // Extract sections for selected standard
-  const sections = configs
-    .filter(c => c.standard === standard)
-    .map(c => c.section)
-    .sort();
+  const sections = isAdmin
+    ? configs.filter(c => c.standard === standard).map(c => c.section).sort()
+    : (dbUser?.assignedClasses || []).filter(c => c.standard === standard).map(c => c.section).sort();
 
   // If a teacher has assignedClasses, default to the first one
   useEffect(() => {
@@ -273,10 +275,10 @@ export function Attendance() {
           <select 
             value={standard} 
             onChange={e => { setStandard(e.target.value); setSection(''); }}
-            disabled={!isAdmin}
+            disabled={!isAdmin && standards.length <= 1}
             className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <option value="">Select</option>
+            <option value="" disabled={!isAdmin && standards.length > 0}>Select</option>
             {standards.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
         </div>
@@ -286,10 +288,10 @@ export function Attendance() {
           <select 
             value={section} 
             onChange={e => setSection(e.target.value)}
-            disabled={!standard || !isAdmin}
+            disabled={!standard || (!isAdmin && sections.length <= 1)}
             className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <option value="">Select</option>
+            <option value="" disabled={!isAdmin && sections.length > 0}>Select</option>
             {sections.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
         </div>

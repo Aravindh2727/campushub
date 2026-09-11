@@ -1,6 +1,6 @@
-# DGHSS 360 - Demo Mode Setup Guide
+# EduSphere 360 - Demo Mode Setup Guide
 
-This guide explains how to start and use the safely isolated, offline Client Demo version of DGHSS 360.
+This guide explains how to start and use the safely isolated, offline Client Demo version of EduSphere 360.
 
 ## Overview
 The application now includes a completely isolated `DEMO MODE`.
@@ -17,7 +17,7 @@ This ensures that:
 
 We have provided a convenient batch script to start all services simultaneously in Demo Mode.
 
-1. Open your terminal or file explorer in the root project directory (`DGHSS 360`).
+1. Open your terminal or file explorer in the root project directory (`EduSphere 360`).
 2. Run the startup script:
    ```cmd
    start-demo.bat

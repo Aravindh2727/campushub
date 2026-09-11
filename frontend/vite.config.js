@@ -33,9 +33,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'Edu Teacher / DGHSS 360',
+        name: 'Edu Teacher / EduSphere 360',
         short_name: 'Edu Teacher',
-        description: 'DGHSS 360 - Official Academic Analytics & Management Dashboard for GHSS Dadapuram (Dhadhapuram / Dhadapuram)',
+        description: 'EduSphere 360 - Official Academic Analytics & Management Dashboard for EduSphere 360',
         theme_color: '#111827',
         background_color: '#0a0a0f',
         display: 'standalone',

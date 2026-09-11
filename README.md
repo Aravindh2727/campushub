@@ -1,6 +1,6 @@
-# CampusHub (DGHSS 360)
+# CampusHub (EduSphere 360)
 
-CampusHub is a comprehensive school management system designed to streamline operations for administrators, teachers, and students. 
+CampusHub is a comprehensive Education Management Platform designed to streamline operations for administrators, teachers, and students. 
 
 This repository contains the complete application, structured into three main components:
 1. **Backend** (Node.js/Express) - The core API and data management layer.

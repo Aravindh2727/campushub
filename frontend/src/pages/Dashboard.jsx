@@ -43,7 +43,7 @@ export function Dashboard() {
           Teacher Dashboard
         </div>
         <h1 className="text-2xl md:text-3xl font-extrabold text-[#E5D9C4] tracking-tight drop-shadow-sm">
-          Dadapuram Government HR Sec School
+          EduSphere 360
         </h1>
       </div>
 

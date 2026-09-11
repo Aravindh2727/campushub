@@ -97,7 +97,7 @@ export function AdminDashboard() {
           System Administration
         </div>
         <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight drop-shadow-sm">
-          Dadapuram Government HR Sec School
+          EduSphere 360
         </h1>
       </div>
 

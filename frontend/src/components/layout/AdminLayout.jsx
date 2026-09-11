@@ -45,7 +45,7 @@ export function AdminLayout() {
             <img src="/dpm_logo.png" alt="Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-xl font-bold tracking-tight text-white">
-            DGHSS 360
+            EduSphere 360
           </h1>
         </div>
         <div className="flex items-center gap-2">
@@ -80,7 +80,7 @@ export function AdminLayout() {
                   <img src="/dpm_logo.png" alt="Logo" className="w-full h-full object-contain" />
                 </div>
                 <h1 className="text-2xl font-bold tracking-tight text-white">
-                  DGHSS 360
+                  EduSphere 360
                 </h1>
               </div>
             )}

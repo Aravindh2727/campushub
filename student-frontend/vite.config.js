@@ -35,7 +35,7 @@ export default defineConfig({
       manifest: {
         name: 'Student Rise',
         short_name: 'Student Rise',
-        description: 'Official Student Rise Portal for GHSS Dadapuram (Dhadhapuram / Dhadapuram) - DGHSS 360',
+        description: 'Official Student Rise Portal for EduSphere 360',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
