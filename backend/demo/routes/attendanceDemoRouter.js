@@ -142,21 +142,91 @@ router.post('/bulk', (req, res) => {
 });
 
 router.get('/report', (req, res) => {
-    const { standard, section, fromDate, toDate } = req.query;
+    const { standard, section, fromDate, toDate, percentage } = req.query;
     let att = readCollection('attendances');
+    let students = readCollection('students');
     
     // Teacher Role check
     if (req.dbUser && req.dbUser.role === 'teacher') {
         const assigned = req.dbUser.assignedClasses || [];
         att = att.filter(a => assigned.some(cls => cls.standard === a.standard && cls.section === a.section));
+        students = students.filter(s => assigned.some(cls => cls.standard === s.standard && cls.section === s.section));
     }
 
-    if (standard && standard !== 'All') att = att.filter(a => a.standard === standard);
-    if (section && section !== 'All') att = att.filter(a => a.section === section);
-    if (fromDate && toDate) {
-        att = att.filter(a => a.date >= fromDate && a.date <= toDate);
+    // Filter attendances (daily, submitted)
+    att = att.filter(a => a.attendanceType === 'daily' && a.isSubmitted === true);
+
+    if (standard && standard !== 'All') {
+        att = att.filter(a => a.standard === standard);
+        students = students.filter(s => s.standard === standard);
     }
-    res.json({ success: true, data: att });
+    if (section && section !== 'All') {
+        att = att.filter(a => a.section === section);
+        students = students.filter(s => s.section === section);
+    }
+    if (fromDate) att = att.filter(a => a.date >= fromDate);
+    if (toDate) att = att.filter(a => a.date <= toDate);
+
+    // Build the report map for each student
+    const reportMap = {};
+    students.forEach(s => {
+        reportMap[s._id] = {
+            studentId: s._id,
+            emisNumber: s.emisNumber,
+            name: s.name,
+            standard: s.standard,
+            section: s.section,
+            totalDays: 0,
+            presentDays: 0,
+            absentDays: 0,
+            percentage: 0
+        };
+    });
+
+    att.forEach(a => {
+        if (a.records) {
+            a.records.forEach(r => {
+                const sId = r.student ? (r.student._id || r.student) : r.studentId;
+                if (reportMap[sId]) {
+                    reportMap[sId].totalDays += 1;
+                    if (r.status === 'Present') {
+                        reportMap[sId].presentDays += 1;
+                    } else {
+                        reportMap[sId].absentDays += 1;
+                    }
+                }
+            });
+        }
+    });
+
+    let reportArray = Object.values(reportMap);
+    reportArray.forEach(row => {
+        if (row.totalDays > 0) {
+            row.percentage = Math.round((row.presentDays / row.totalDays) * 100);
+        } else {
+            row.percentage = 0;
+        }
+    });
+
+    if (percentage && percentage !== 'All') {
+        if (percentage === '90% and Above') {
+            reportArray = reportArray.filter(r => r.percentage >= 90);
+        } else if (percentage === '80%–89%') {
+            reportArray = reportArray.filter(r => r.percentage >= 80 && r.percentage < 90);
+        } else if (percentage === '75%–79%') {
+            reportArray = reportArray.filter(r => r.percentage >= 75 && r.percentage < 80);
+        } else if (percentage === 'Below 75%') {
+            reportArray = reportArray.filter(r => r.percentage < 75);
+        }
+    }
+
+    reportArray.sort((a, b) => {
+        if (a.standard !== b.standard) return parseInt(a.standard) - parseInt(b.standard);
+        if (a.section !== b.section) return (a.section || '').localeCompare(b.section || '');
+        return (a.name || '').localeCompare(b.name || '');
+    });
+
+    res.json({ success: true, data: reportArray });
 });
 
 router.get('/export', (req, res) => {
