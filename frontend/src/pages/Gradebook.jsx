@@ -68,7 +68,7 @@ export function Gradebook() {
   const handleMarkChange = (studentId, subject, value) => {
     setMarks(prev => ({
       ...prev,
-      [`${studentId}-${subject}`]: value
+      [`${studentId}_|_${subject}`]: value
     }));
     appState.setFormDirty('Gradebook', true);
   };
@@ -123,7 +123,7 @@ export function Gradebook() {
           }
         }
         
-        newMarks[`${student._id}-${sub}`] = score;
+        newMarks[`${student._id}_|_${sub}`] = score;
       });
     });
     setMarks(newMarks);
@@ -139,9 +139,7 @@ export function Gradebook() {
       const studentUpdates = {};
       
       Object.entries(marks).forEach(([key, score]) => {
-        const firstHyphen = key.indexOf('-');
-        const studentId = key.substring(0, firstHyphen);
-        const subject = key.substring(firstHyphen + 1);
+        const [studentId, subject] = key.split('_|_');
 
         if (!studentUpdates[studentId]) {
           studentUpdates[studentId] = [];
@@ -256,7 +254,7 @@ export function Gradebook() {
                           min="0"
                           max={selectedTerm === 'All Terms' ? "300" : "100"}
                           required
-                          value={marks[`${student._id}-${sub}`] !== undefined && marks[`${student._id}-${sub}`] !== '' ? marks[`${student._id}-${sub}`] : 0}
+                          value={marks[`${student._id}_|_${sub}`] !== undefined && marks[`${student._id}_|_${sub}`] !== '' ? marks[`${student._id}_|_${sub}`] : 0}
                           onChange={(e) => handleMarkChange(student._id, sub, e.target.value)}
                           className={`glass-input w-20 text-center font-bold text-[#2E1C40] dark:text-gray-900 bg-white dark:bg-[#121212] shadow-sm border border-[#E5D9C4] dark:border-[#4C677C]/50 ${!hasFullAccess ? 'opacity-50 cursor-not-allowed bg-slate-50 dark:bg-slate-800 border-none shadow-none' : ''}`}
                           disabled={!hasFullAccess}
@@ -264,7 +262,7 @@ export function Gradebook() {
                       </td>
                     ))}
                     <td className="p-4 font-black text-[#732A26] dark:text-[#FA7848] text-lg">
-                      {currentSubjects.reduce((sum, sub) => sum + (Number(marks[`${student._id}-${sub}`]) || 0), 0)}
+                      {currentSubjects.reduce((sum, sub) => sum + (Number(marks[`${student._id}_|_${sub}`]) || 0), 0)}
                     </td>
                   </tr>
                 ))}

@@ -4,7 +4,7 @@ const { readCollection, writeCollection } = require('../demoDataService');
 const { v4: uuidv4 } = require('uuid');
 
 router.get('/', (req, res) => {
-    const { date, standard, section } = req.query;
+    const { date, standard, section, period, attendanceType = 'period' } = req.query;
     let att = readCollection('attendances');
 
     // Teacher Role check
@@ -14,22 +14,35 @@ router.get('/', (req, res) => {
     }
 
     if (date) {
-        // match YYYY-MM-DD part
-        att = att.filter(a => a.date && a.date.startsWith(date));
+        att = att.filter(a => a.date === date);
     }
     if (standard && standard !== 'All') att = att.filter(a => a.standard === standard);
     if (section && section !== 'All') att = att.filter(a => a.section === section);
-    res.json({ success: true, data: att });
+    if (attendanceType) att = att.filter(a => a.attendanceType === attendanceType);
+    if (attendanceType === 'period' && period) att = att.filter(a => String(a.period) === String(period));
+
+    if (att.length > 0) {
+        res.json(att[0]);
+    } else {
+        res.json({ records: [], isSubmitted: false });
+    }
 });
 
 router.post('/', (req, res) => {
-    const { standard, section, date, records } = req.body;
+    const { standard, section, date, records, attendanceType = 'period', period, isSubmitted } = req.body;
     const attendances = readCollection('attendances');
     
-    const existingIndex = attendances.findIndex(a => a.standard === standard && a.section === section && a.date && a.date.startsWith(date.split('T')[0]));
+    const existingIndex = attendances.findIndex(a => 
+        a.standard === standard && 
+        a.section === section && 
+        a.date === date &&
+        a.attendanceType === attendanceType &&
+        (attendanceType !== 'period' || String(a.period) === String(period))
+    );
     
     if (existingIndex > -1) {
         attendances[existingIndex].records = records;
+        if (isSubmitted !== undefined) attendances[existingIndex].isSubmitted = isSubmitted;
         writeCollection('attendances', attendances);
         res.json({ success: true, data: attendances[existingIndex] });
     } else {
@@ -38,7 +51,10 @@ router.post('/', (req, res) => {
             standard,
             section,
             date,
+            attendanceType,
+            period: attendanceType === 'period' ? Number(period) : null,
             records,
+            isSubmitted: isSubmitted || false,
             markedBy: req.user ? req.user.uid : 'U-ADMIN'
         };
         attendances.push(newAtt);
@@ -49,34 +65,59 @@ router.post('/', (req, res) => {
 
 router.get('/summary', (req, res) => {
     const { date, standard, section } = req.query;
-    let att = readCollection('attendances');
     
-    // Teacher Role check
-    if (req.dbUser && req.dbUser.role === 'teacher') {
-        const assigned = req.dbUser.assignedClasses || [];
-        att = att.filter(a => assigned.some(cls => cls.standard === a.standard && cls.section === a.section));
-    }
+    let students = readCollection('students');
+    students = students.filter(s => s.standard === standard && s.section === section);
 
-    if (date) att = att.filter(a => a.date && a.date.startsWith(date));
+    let att = readCollection('attendances');
+    // Filter attendances for the given date, standard, section
+    if (date) att = att.filter(a => a.date === date);
     if (standard && standard !== 'All') att = att.filter(a => a.standard === standard);
     if (section && section !== 'All') att = att.filter(a => a.section === section);
     
-    const summary = att.map(a => ({
-        classId: `${a.standard}-${a.section}`,
-        standard: a.standard,
-        section: a.section,
-        totalStudents: a.records.length,
-        presentCount: a.records.filter(r => r.status === 'Present').length,
-        absentCount: a.records.filter(r => r.status === 'Absent').length,
-        markedBy: a.markedBy
-    }));
-    res.json({ success: true, data: summary });
+    // In production we only summarize submitted attendance
+    att = att.filter(a => a.isSubmitted === true);
+
+    const summaryMap = {};
+    students.forEach(s => {
+        summaryMap[s._id] = {
+            _id: s._id,
+            name: s.name,
+            emisNumber: s.emisNumber,
+            daily: '-',
+            periods: { 1: '-', 2: '-', 3: '-', 4: '-', 5: '-', 6: '-', 7: '-', 8: '-' }
+        };
+    });
+
+    att.forEach(a => {
+        if (a.records) {
+            a.records.forEach(r => {
+                const stuId = r.student ? (r.student._id || r.student) : r.studentId;
+                if (summaryMap[stuId]) {
+                    const statusChar = r.status === 'Present' ? 'P' : (r.status === 'Absent' ? 'A' : 'L');
+                    if (a.attendanceType === 'daily') {
+                        summaryMap[stuId].daily = statusChar;
+                    } else if (a.attendanceType === 'period') {
+                        summaryMap[stuId].periods[a.period] = statusChar;
+                    }
+                }
+            });
+        }
+    });
+
+    res.json(Object.values(summaryMap));
 });
 
 router.delete('/', (req, res) => {
-    const { standard, section, date } = req.query;
+    const { standard, section, date, attendanceType = 'period', period } = req.query;
     let att = readCollection('attendances');
-    att = att.filter(a => !(a.standard === standard && a.section === section && a.date && a.date.startsWith(date.split('T')[0])));
+    att = att.filter(a => !(
+        a.standard === standard && 
+        a.section === section && 
+        a.date === date &&
+        a.attendanceType === attendanceType &&
+        (attendanceType !== 'period' || String(a.period) === String(period))
+    ));
     writeCollection('attendances', att);
     res.json({ success: true });
 });
