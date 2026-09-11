@@ -66,9 +66,8 @@ export function Leaderboard() {
     
     // 1. Calculate percentage for each student
     let processed = leaderboard.map(student => {
-      const standard = String(student.standard);
-      const maxMarks = (standard === '11' || standard === '12') ? 600 : 500;
-      const percentage = (student.totalMarks / maxMarks) * 100;
+      // Use the percentage and max marks calculated correctly by the backend
+      const percentage = student.percentage || 0;
       return {
         ...student,
         calculatedPercentage: percentage,
@@ -268,10 +267,10 @@ export function Leaderboard() {
               
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg sm:text-xl font-bold truncate text-[#2E1C40] dark:text-gray-900">{student.name}</h3>
-                <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-[#4C677C] dark:text-gray-300 text-xs sm:text-sm mt-1">
-                  <span className="whitespace-nowrap">EMIS No: {student.emisNumber}</span>
+                <div className="flex flex-col lg:flex-row lg:items-center gap-1 sm:gap-2 text-[#4C677C] dark:text-gray-300 text-xs sm:text-sm mt-1 min-w-0">
+                  <span className="truncate max-w-full" title={student.emisNumber}>EMIS No: {student.emisNumber}</span>
                   {(selectedClass === 'All' || selectedSection === 'All') && (
-                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap inline-block">
+                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap inline-block w-max">
                       Std {student.standard} - {student.section}
                     </span>
                   )}
@@ -282,13 +281,13 @@ export function Leaderboard() {
                 <div className="flex flex-col items-end">
                   <div className="text-[10px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Marks</div>
                   <div className={cn(
-                    "text-base sm:text-xl font-black",
+                    "text-base sm:text-xl font-black whitespace-nowrap",
                     rankBy === 'Marks' ? "text-[#2E1C40] dark:text-white text-lg sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
                     student.computedRank === 1 && rankBy === 'Marks' ? 'text-[#AE634A]' : '',
                     student.computedRank === 2 && rankBy === 'Marks' ? 'text-adminSidebar' : '',
                     student.computedRank === 3 && rankBy === 'Marks' ? 'text-[#732A26]' : ''
                   )}>
-                    {student.totalMarks}
+                    {student.totalMarks} {student.maximumMarks ? `/ ${student.maximumMarks}` : ''}
                   </div>
                 </div>
                 

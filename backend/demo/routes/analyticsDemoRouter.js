@@ -2,6 +2,73 @@ const express = require('express');
 const router = express.Router();
 const { readCollection } = require('../demoDataService');
 
+const processStudents = (stList) => {
+    const classConfigs = readCollection('classconfigs');
+    return stList.map(s => {
+        const config = classConfigs.find(c => c.standard === s.standard && c.section === s.section);
+        const expectedSubjects = config && config.subjects && config.subjects.length > 0 
+            ? config.subjects.length 
+            : (['11', '12'].includes(s.standard) ? 6 : 5);
+        
+        const maxMarksPerExam = expectedSubjects * 100;
+        
+        let totalMarks = 0;
+        let maximumMarks = 0;
+        const processedTerms = [];
+
+        if (s.terms) {
+            const uniqueTerms = {};
+            s.terms.forEach(t => {
+                if (!uniqueTerms[t.termName]) {
+                    let termScore = 0;
+                    if (t.marks) {
+                        const uniqueSubjects = {};
+                        t.marks.forEach(m => {
+                            if (m.subject && !uniqueSubjects[m.subject]) {
+                                termScore += Number(m.score) || 0;
+                                uniqueSubjects[m.subject] = true;
+                            }
+                        });
+                    }
+                    
+                    const termPercentage = Math.round((termScore / maxMarksPerExam) * 10000) / 100;
+                    uniqueTerms[t.termName] = {
+                        termName: t.termName,
+                        topScore: termScore, // 'topScore' used for compatibility with frontend expectation
+                        maximumMarks: maxMarksPerExam,
+                        percentage: termPercentage
+                    };
+                    
+                    totalMarks += termScore;
+                    maximumMarks += maxMarksPerExam;
+                }
+            });
+            processedTerms.push(...Object.values(uniqueTerms));
+        }
+
+        if (maximumMarks === 0) {
+            maximumMarks = maxMarksPerExam; // Fallback
+        }
+
+        const percentage = Math.round((totalMarks / maximumMarks) * 10000) / 100;
+        const genderPriority = s.gender === 'Male' ? 1 : (s.gender === 'Female' ? 2 : 3);
+        
+        return {
+            _id: s._id,
+            emisNumber: s.emisNumber,
+            name: s.name,
+            standard: s.standard,
+            section: s.section,
+            gender: s.gender,
+            totalMarks,
+            maximumMarks,
+            percentage,
+            genderPriority,
+            processedTerms
+        };
+    }).filter(s => ['6','7','8','9','10','11','12'].includes(s.standard));
+};
+
 router.get('/dashboard', (req, res) => {
     const students = readCollection('students');
     const teachers = readCollection('users').filter(u => u.role === 'teacher');
@@ -20,71 +87,6 @@ router.get('/dashboard', (req, res) => {
     const maleStudents = filteredStudents.filter(s => s.gender === 'Male').length;
     const femaleStudents = filteredStudents.filter(s => s.gender === 'Female').length;
     const totalTeachers = teachers.length;
-
-    const classConfigs = readCollection('classconfigs');
-
-    // Helper to calculate total marks and percentage
-    const processStudents = (stList) => {
-        return stList.map(s => {
-            const config = classConfigs.find(c => c.standard === s.standard && c.section === s.section);
-            const expectedSubjects = config && config.subjects && config.subjects.length > 0 
-                ? config.subjects.length 
-                : (['11', '12'].includes(s.standard) ? 6 : 5);
-            
-            const maxMarksPerExam = expectedSubjects * 100;
-            
-            let totalMarks = 0;
-            let maximumMarks = 0;
-            const processedTerms = [];
-
-            if (s.terms) {
-                const uniqueTerms = {};
-                s.terms.forEach(t => {
-                    if (!uniqueTerms[t.termName]) {
-                        let termScore = 0;
-                        if (t.marks) {
-                            t.marks.forEach(m => {
-                                termScore += Number(m.score) || 0;
-                            });
-                        }
-                        
-                        const termPercentage = Math.round((termScore / maxMarksPerExam) * 10000) / 100;
-                        uniqueTerms[t.termName] = {
-                            termName: t.termName,
-                            topScore: termScore, // 'topScore' used for compatibility with frontend expectation
-                            maximumMarks: maxMarksPerExam,
-                            percentage: termPercentage
-                        };
-                        
-                        totalMarks += termScore;
-                        maximumMarks += maxMarksPerExam;
-                    }
-                });
-                processedTerms.push(...Object.values(uniqueTerms));
-            }
-
-            if (maximumMarks === 0) {
-                maximumMarks = maxMarksPerExam; // Fallback
-            }
-
-            const percentage = Math.round((totalMarks / maximumMarks) * 10000) / 100;
-            const genderPriority = s.gender === 'Male' ? 1 : (s.gender === 'Female' ? 2 : 3);
-            
-            return {
-                _id: s._id,
-                emisNumber: s.emisNumber,
-                name: s.name,
-                standard: s.standard,
-                section: s.section,
-                gender: s.gender,
-                totalMarks,
-                maximumMarks,
-                percentage,
-                genderPriority,
-                processedTerms
-            };
-        }).filter(s => ['6','7','8','9','10','11','12'].includes(s.standard));
-    };
 
     let processedStudents = processStudents(filteredStudents);
 
@@ -202,21 +204,16 @@ router.get('/leaderboard', (req, res) => {
     if (standard && standard !== 'All') filtered = filtered.filter(s => s.standard === standard);
     if (section && section !== 'All') filtered = filtered.filter(s => s.section === section);
     
-    const leaderboard = filtered.map(s => {
-        let totalMarks = 0;
-        if (s.terms) {
-            s.terms.forEach(t => {
-                if (t.marks) {
-                    t.marks.forEach(m => {
-                        totalMarks += m.score || 0;
-                    });
-                }
-            });
-        }
-        return { ...s, totalMarks };
+    const leaderboard = processStudents(filtered);
+    
+    leaderboard.sort((a, b) => {
+        // Let the frontend rank by whatever it wants (it does custom sorting anyway)
+        // But we provide a sensible default:
+        if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+        return b.totalMarks - a.totalMarks;
     });
     
-    leaderboard.sort((a, b) => b.totalMarks - a.totalMarks);
+    // Calculate simple sequential rank for demo purposes
     leaderboard.forEach((s, index) => {
         s.rank = index + 1;
     });

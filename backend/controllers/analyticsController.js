@@ -18,53 +18,13 @@ const getClassLeaderboard = async (req, res) => {
     if (section !== 'All') matchStage.section = section;
 
     const leaderboard = await Student.aggregate([
-      // 1. Filter students dynamically
-      {
-        $match: matchStage
-      },
-      // 2. Unwind terms to access marks
-      {
-        $unwind: {
-          path: "$terms",
-          preserveNullAndEmptyArrays: true
-        }
-      },
-      // 3. Unwind marks to access individual subject scores
-      {
-        $unwind: {
-          path: "$terms.marks",
-          preserveNullAndEmptyArrays: true
-        }
-      },
-      // 4. Group by student to calculate total cumulative marks
-      {
-        $group: {
-          _id: "$_id",
-          emisNumber: { $first: "$emisNumber" },
-          name: { $first: "$name" },
-          photoUrl: { $first: "$photoUrl" },
-          standard: { $first: "$standard" },
-          section: { $first: "$section" },
-          totalMarks: {
-            $sum: "$terms.marks.score"
-          }
-        }
-      },
-      // 5. Use $setWindowFields to calculate rank based on totalMarks (highest to lowest)
-      {
-        $setWindowFields: {
-          sortBy: { totalMarks: -1 },
-          output: {
-            rank: {
-              $denseRank: {}
-            }
-          }
-        }
-      },
-      // 6. Sort by rank to return leaderboard top-to-bottom
+      ...buildStudentAggregationPipeline(matchStage),
+      // We will let the frontend rank by marks or percentage as it already does,
+      // but if we want rank by percentage here by default:
       {
         $sort: {
-          rank: 1
+          percentage: -1,
+          totalMarks: -1
         }
       }
     ]);
@@ -78,6 +38,127 @@ const getClassLeaderboard = async (req, res) => {
     console.error('Error fetching leaderboard:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+};
+
+const buildStudentAggregationPipeline = (matchQuery) => {
+  return [
+    { $match: matchQuery },
+    { $unwind: { path: "$terms", preserveNullAndEmptyArrays: false } },
+    {
+      $group: {
+        _id: {
+          studentId: "$_id",
+          standard: "$standard",
+          section: "$section",
+          name: "$name",
+          gender: "$gender",
+          emisNumber: "$emisNumber",
+          termName: "$terms.termName"
+        },
+        termMarks: { $first: "$terms.marks" }
+      }
+    },
+    { $unwind: { path: "$termMarks", preserveNullAndEmptyArrays: true } },
+    {
+      $group: {
+        _id: {
+          studentId: "$_id.studentId",
+          standard: "$_id.standard",
+          section: "$_id.section",
+          name: "$_id.name",
+          gender: "$_id.gender",
+          emisNumber: "$_id.emisNumber",
+          termName: "$_id.termName",
+          subject: "$termMarks.subject"
+        },
+        score: { $first: { $convert: { input: "$termMarks.score", to: "double", onError: 0, onNull: 0 } } }
+      }
+    },
+    {
+      $group: {
+        _id: {
+          studentId: "$_id.studentId",
+          standard: "$_id.standard",
+          section: "$_id.section",
+          name: "$_id.name",
+          gender: "$_id.gender",
+          emisNumber: "$_id.emisNumber",
+          termName: "$_id.termName"
+        },
+        termScore: { $sum: "$score" }
+      }
+    },
+    {
+      $lookup: {
+        from: "classconfigs",
+        let: { std: "$_id.standard", sec: "$_id.section" },
+        pipeline: [
+          { $match: { $expr: { $and: [ { $eq: ["$standard", "$$std"] }, { $eq: ["$section", "$$sec"] } ] } } }
+        ],
+        as: "classConfig"
+      }
+    },
+    {
+      $addFields: {
+        expectedSubjects: {
+          $cond: {
+            if: { $gt: [{ $size: "$classConfig" }, 0] },
+            then: { $size: { $arrayElemAt: ["$classConfig.subjects", 0] } },
+            else: {
+              $cond: {
+                if: { $in: ["$_id.standard", ["11", "12"]] }, then: 6, else: 5
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      $addFields: {
+        termMaxMarks: { $multiply: ["$expectedSubjects", 100] }
+      }
+    },
+    {
+      $group: {
+        _id: "$_id.studentId",
+        emisNumber: { $first: "$_id.emisNumber" },
+        name: { $first: "$_id.name" },
+        standard: { $first: "$_id.standard" },
+        section: { $first: "$_id.section" },
+        gender: { $first: "$_id.gender" },
+        totalMarks: { $sum: "$termScore" },
+        maximumMarks: { $sum: "$termMaxMarks" },
+        photoUrl: { $first: "$_id.photoUrl" },
+        processedTerms: {
+          $push: {
+            termName: "$_id.termName",
+            termScore: "$termScore",
+            termMaxMarks: "$termMaxMarks"
+          }
+        }
+      }
+    },
+    { $match: { maximumMarks: { $gt: 0 } } },
+    {
+      $addFields: {
+        percentage: {
+          $round: [
+            { $multiply: [ { $divide: ["$totalMarks", "$maximumMarks"] }, 100 ] },
+            2
+          ]
+        },
+        genderPriority: {
+          $switch: {
+            branches: [
+              { case: { $eq: ["$gender", "Male"] }, then: 1 },
+              { case: { $eq: ["$gender", "Female"] }, then: 2 }
+            ],
+            default: 3
+          }
+        }
+      }
+    }
+  ];
 };
 
 const getDashboardStats = async (req, res) => {
@@ -101,103 +182,6 @@ const getDashboardStats = async (req, res) => {
     const maleStudents = await Student.countDocuments({ ...query, gender: 'Male' });
     const femaleStudents = await Student.countDocuments({ ...query, gender: 'Female' });
     const totalTeachers = await User.countDocuments({ role: 'teacher' });
-
-    const buildStudentAggregationPipeline = (matchQuery) => {
-      return [
-        { $match: matchQuery },
-        { $unwind: { path: "$terms", preserveNullAndEmptyArrays: false } },
-        {
-          $group: {
-            _id: {
-              studentId: "$_id",
-              standard: "$standard",
-              section: "$section",
-              name: "$name",
-              gender: "$gender",
-              emisNumber: "$emisNumber",
-              termName: "$terms.termName"
-            },
-            termMarks: { $first: "$terms.marks" }
-          }
-        },
-        { $unwind: { path: "$termMarks", preserveNullAndEmptyArrays: true } },
-        {
-          $group: {
-            _id: "$_id",
-            termScore: { $sum: { $convert: { input: "$termMarks.score", to: "double", onError: 0, onNull: 0 } } }
-          }
-        },
-        {
-          $lookup: {
-            from: "classconfigs",
-            let: { std: "$_id.standard", sec: "$_id.section" },
-            pipeline: [
-              { $match: { $expr: { $and: [ { $eq: ["$standard", "$$std"] }, { $eq: ["$section", "$$sec"] } ] } } }
-            ],
-            as: "classConfig"
-          }
-        },
-        {
-          $addFields: {
-            expectedSubjects: {
-              $cond: {
-                if: { $gt: [{ $size: "$classConfig" }, 0] },
-                then: { $size: { $arrayElemAt: ["$classConfig.subjects", 0] } },
-                else: {
-                  $cond: {
-                    if: { $in: ["$_id.standard", ["11", "12"]] }, then: 6, else: 5
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          $addFields: {
-            termMaxMarks: { $multiply: ["$expectedSubjects", 100] }
-          }
-        },
-        {
-          $group: {
-            _id: "$_id.studentId",
-            emisNumber: { $first: "$_id.emisNumber" },
-            name: { $first: "$_id.name" },
-            standard: { $first: "$_id.standard" },
-            section: { $first: "$_id.section" },
-            gender: { $first: "$_id.gender" },
-            totalMarks: { $sum: "$termScore" },
-            maximumMarks: { $sum: "$termMaxMarks" },
-            processedTerms: {
-              $push: {
-                termName: "$_id.termName",
-                termScore: "$termScore",
-                termMaxMarks: "$termMaxMarks"
-              }
-            }
-          }
-        },
-        { $match: { maximumMarks: { $gt: 0 } } },
-        {
-          $addFields: {
-            percentage: {
-              $round: [
-                { $multiply: [ { $divide: ["$totalMarks", "$maximumMarks"] }, 100 ] },
-                2
-              ]
-            },
-            genderPriority: {
-              $switch: {
-                branches: [
-                  { case: { $eq: ["$gender", "Male"] }, then: 1 },
-                  { case: { $eq: ["$gender", "Female"] }, then: 2 }
-                ],
-                default: 3
-              }
-            }
-          }
-        }
-      ];
-    };
 
     // Get Top 3 students across the school (or teacher's classes)
     const topStudents = await Student.aggregate([
