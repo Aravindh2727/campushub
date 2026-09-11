@@ -3,7 +3,8 @@ import { GlassCard } from '../components/ui/GlassCard';
 import { useAuth } from '../context/AuthContext';
 import { NeonButton } from '../components/ui/NeonButton';
 import { api } from '../lib/api';
-import { User, Mail, Shield, BookOpen, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { User, Mail, Shield, BookOpen, AlertCircle, CheckCircle2, Download } from 'lucide-react';
+import { usePWAInstall } from '../hooks/usePWAInstall';
 
 export function Profile() {
   const { dbUser } = useAuth();
@@ -12,6 +13,7 @@ export function Profile() {
   const [isSaving, setIsSaving] = useState(false);
   const [message, setMessage] = useState({ text: '', type: '' });
   const [isEditing, setIsEditing] = useState(false);
+  const { isInstallable, installApp } = usePWAInstall();
 
   useEffect(() => {
     if (dbUser) {
@@ -138,14 +140,26 @@ export function Profile() {
 
             <div className="pt-8 mt-4 border-t border-[#E5D9C4] dark:border-gray-200 flex flex-wrap gap-4">
               {!isEditing ? (
-                <button 
-                  type="button" 
-                  onClick={(e) => { e.preventDefault(); setIsEditing(true); }}
-                  className="px-8 py-3.5 rounded-xl font-bold text-[#0B132B] bg-adminSidebar text-white hover:bg-[#4ebab0] hover:shadow-[0_0_25px_rgba(98,212,202,0.4)] transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
-                >
-                  <User className="w-5 h-5" />
-                  Edit Profile
-                </button>
+                <>
+                  <button 
+                    type="button" 
+                    onClick={(e) => { e.preventDefault(); setIsEditing(true); }}
+                    className="px-8 py-3.5 rounded-xl font-bold text-[#0B132B] bg-adminSidebar text-white hover:bg-[#4ebab0] hover:shadow-[0_0_25px_rgba(98,212,202,0.4)] transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
+                  >
+                    <User className="w-5 h-5" />
+                    Edit Profile
+                  </button>
+                  {isInstallable && (dbUser?.role === 'admin' || dbUser?.role === 'teacher') && (
+                    <button 
+                      type="button"
+                      onClick={installApp}
+                      className="px-8 py-3.5 rounded-xl font-bold text-white bg-adminAccent2 hover:bg-orange-500 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
+                    >
+                      <Download className="w-5 h-5" />
+                      Install App
+                    </button>
+                  )}
+                </>
               ) : (
                 <>
                   <button 

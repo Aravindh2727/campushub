@@ -133,25 +133,6 @@ export function AdminLayout() {
         </div>
 
         <div className={cn("p-4 shrink-0 border-t border-white/5", !isSidebarOpen && "flex flex-col items-center")}>
-          {isInstallable && (
-            <button 
-              onClick={installApp}
-              className={cn(
-                "flex items-center rounded-2xl transition-all duration-300 w-full font-bold mb-2",
-                isSidebarOpen ? "gap-3 px-4 py-3.5" : "justify-center p-3.5 mx-auto w-12",
-                "bg-adminAccent2 text-white shadow-md"
-              )}
-              title={!isSidebarOpen ? "Install App" : undefined}
-            >
-              <Download className={cn("w-5 h-5 flex-shrink-0", !isSidebarOpen && "md:mx-auto")} />
-              {isSidebarOpen ? (
-                <span className="whitespace-nowrap overflow-hidden">Install App</span>
-              ) : (
-                <span className="md:hidden whitespace-nowrap overflow-hidden ml-3">Install App</span>
-              )}
-            </button>
-          )}
-
           <div className="flex justify-center w-full mb-1">
             <button 
               type="button"
