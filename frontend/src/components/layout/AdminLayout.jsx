@@ -3,14 +3,12 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LayoutDashboard, Users, User, LogOut, GraduationCap, BarChart3, FileText, Backpack, Menu, X, ChevronLeft, ChevronRight, ChevronUp, Bot, BookOpen, Database, Settings, PieChart, Download, CalendarCheck, Link as LinkIcon, MessageSquare, Code } from 'lucide-react';
 import { cn } from '../../lib/utils';
-import { usePWAInstall } from '../../hooks/usePWAInstall';
 import { useMobileSidebar } from '../../hooks/useMobileSidebar';
 
 export function AdminLayout() {
   const { isSidebarOpen, setIsSidebarOpen, closeSidebarSafely, navigate } = useMobileSidebar(window.innerWidth >= 768, 768);
   const [isBottomMenuExpanded, setIsBottomMenuExpanded] = useState(true);
   const { logout, dbUser } = useAuth();
-  const { isInstallable, installApp } = usePWAInstall();
 
   const handleNavClick = (e, path) => {
     if (window.innerWidth < 768) {
@@ -51,15 +49,6 @@ export function AdminLayout() {
           </h1>
         </div>
         <div className="flex items-center gap-2">
-          {isInstallable && (
-            <button 
-              onClick={installApp}
-              className="p-1.5 px-3 text-xs font-bold bg-adminAccent2 text-white rounded-lg shadow-sm flex items-center gap-1"
-            >
-              <Download className="w-3.5 h-3.5" />
-              Install
-            </button>
-          )}
           <button 
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             className="p-2 bg-white/10 text-white rounded-lg border border-white/20"

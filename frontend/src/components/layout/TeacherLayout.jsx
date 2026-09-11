@@ -4,7 +4,6 @@ import { useAuth } from '../../context/AuthContext';
 import { LayoutDashboard, Users, GraduationCap, LogOut, BarChart3, ShieldAlert, FileText, User, ChevronLeft, ChevronRight, ChevronUp, Menu, X, Bot, BookOpen, Bell, Megaphone, CalendarCheck, Link, MessageSquare, Code } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { api } from '../../lib/api';
-import { usePWAInstall } from '../../hooks/usePWAInstall';
 import { useMobileSidebar } from '../../hooks/useMobileSidebar';
 
 export function TeacherLayout() {
@@ -15,7 +14,6 @@ export function TeacherLayout() {
   const [notifications, setNotifications] = useState([]);
   const [isNotificationPanelOpen, setIsNotificationPanelOpen] = useState(false);
   const { logout, dbUser } = useAuth();
-  const { isInstallable, installApp } = usePWAInstall();
 
   useEffect(() => {
     const fetchNotifications = async () => {
@@ -78,15 +76,6 @@ export function TeacherLayout() {
           </h1>
         </div>
         <div className="flex items-center gap-2">
-          {isInstallable && (
-            <button 
-              onClick={installApp}
-              className="p-1.5 px-3 text-xs font-bold bg-[#D8FDF6] text-[#2E1C40] rounded-lg shadow-sm flex items-center gap-1 mr-1"
-            >
-              <Download className="w-3.5 h-3.5" />
-              Install
-            </button>
-          )}
           <button 
             onClick={handleNotificationClick}
             className="relative p-2 text-[#E5D9C4] hover:text-adminSidebar transition-colors rounded-full"
