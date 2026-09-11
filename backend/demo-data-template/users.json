@@ -5,7 +5,8 @@
     "role": "admin",
     "email": "admin@demo.com",
     "name": "Demo Admin",
-    "isActive": true
+    "isActive": true,
+    "status": "approved"
   },
   {
     "_id": "T001",
@@ -27,7 +28,8 @@
         "subject": "English",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T002",
@@ -49,7 +51,8 @@
         "subject": "Mathematics",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T003",
@@ -71,7 +74,8 @@
         "subject": "Science",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T004",
@@ -93,7 +97,8 @@
         "subject": "Social Science",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T005",
@@ -115,7 +120,8 @@
         "subject": "Tamil",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T006",
@@ -137,7 +143,8 @@
         "subject": "Physics",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T007",
@@ -159,7 +166,8 @@
         "subject": "Biology",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
   },
   {
     "_id": "T008",
@@ -175,6 +183,17 @@
         "subject": "Computer Science",
         "accessLevel": "edit"
       }
-    ]
+    ],
+    "status": "approved"
+  },
+  {
+    "_id": "T009",
+    "uid": "demo-teacher-009",
+    "role": "teacher",
+    "email": "new.teacher@demo.com",
+    "name": "New Pending Teacher",
+    "status": "pending",
+    "isActive": true,
+    "createdAt": "2026-09-11T07:40:21.365Z"
   }
 ]
