@@ -21,22 +21,55 @@ router.get('/dashboard', (req, res) => {
     const femaleStudents = filteredStudents.filter(s => s.gender === 'Female').length;
     const totalTeachers = teachers.length;
 
+    const classConfigs = readCollection('classconfigs');
+
     // Helper to calculate total marks and percentage
     const processStudents = (stList) => {
         return stList.map(s => {
+            const config = classConfigs.find(c => c.standard === s.standard && c.section === s.section);
+            const expectedSubjects = config && config.subjects && config.subjects.length > 0 
+                ? config.subjects.length 
+                : (['11', '12'].includes(s.standard) ? 6 : 5);
+            
+            const maxMarksPerExam = expectedSubjects * 100;
+            
             let totalMarks = 0;
+            let maximumMarks = 0;
+            const processedTerms = [];
+
             if (s.terms) {
+                const uniqueTerms = {};
                 s.terms.forEach(t => {
-                    if (t.marks) {
-                        t.marks.forEach(m => {
-                            totalMarks += Number(m.score) || 0;
-                        });
+                    if (!uniqueTerms[t.termName]) {
+                        let termScore = 0;
+                        if (t.marks) {
+                            t.marks.forEach(m => {
+                                termScore += Number(m.score) || 0;
+                            });
+                        }
+                        
+                        const termPercentage = Math.round((termScore / maxMarksPerExam) * 10000) / 100;
+                        uniqueTerms[t.termName] = {
+                            termName: t.termName,
+                            topScore: termScore, // 'topScore' used for compatibility with frontend expectation
+                            maximumMarks: maxMarksPerExam,
+                            percentage: termPercentage
+                        };
+                        
+                        totalMarks += termScore;
+                        maximumMarks += maxMarksPerExam;
                     }
                 });
+                processedTerms.push(...Object.values(uniqueTerms));
             }
-            const maximumMarks = ['11', '12'].includes(s.standard) ? 600 : 500;
+
+            if (maximumMarks === 0) {
+                maximumMarks = maxMarksPerExam; // Fallback
+            }
+
             const percentage = Math.round((totalMarks / maximumMarks) * 10000) / 100;
             const genderPriority = s.gender === 'Male' ? 1 : (s.gender === 'Female' ? 2 : 3);
+            
             return {
                 _id: s._id,
                 emisNumber: s.emisNumber,
@@ -47,7 +80,8 @@ router.get('/dashboard', (req, res) => {
                 totalMarks,
                 maximumMarks,
                 percentage,
-                genderPriority
+                genderPriority,
+                processedTerms
             };
         }).filter(s => ['6','7','8','9','10','11','12'].includes(s.standard));
     };
@@ -88,23 +122,25 @@ router.get('/dashboard', (req, res) => {
     });
 
     const classTermMap = {};
-    filteredStudents.forEach(s => {
-        if (s.terms) {
-            s.terms.forEach(t => {
-                let termScore = 0;
-                if (t.marks) {
-                    t.marks.forEach(m => { termScore += Number(m.score) || 0; });
-                }
-                const key = `${s.standard}-${s.section}-${t.termName}`;
-                if (!classTermMap[key] || termScore > classTermMap[key].topScore) {
-                    classTermMap[key] = {
-                        _id: { standard: s.standard, section: s.section, termName: t.termName },
-                        topStudent: s.name,
-                        topScore: termScore
-                    };
-                }
-            });
-        }
+    processedStudents.forEach(s => {
+        s.processedTerms.forEach(t => {
+            const key = `${s.standard}-${s.section}-${t.termName}`;
+            // Use percentage to determine the topper, fallback to topScore
+            const isTopper = !classTermMap[key] || 
+                             t.percentage > classTermMap[key].percentage || 
+                             (t.percentage === classTermMap[key].percentage && t.topScore > classTermMap[key].topScore);
+            
+            if (isTopper) {
+                classTermMap[key] = {
+                    _id: { standard: s.standard, section: s.section, termName: t.termName },
+                    studentId: s._id,
+                    topStudent: s.name,
+                    topScore: t.topScore,
+                    maximumMarks: t.maximumMarks,
+                    percentage: t.percentage
+                };
+            }
+        });
     });
     const classwiseFirstMarks = Object.values(classTermMap).sort((a, b) => {
         const standardA = parseInt(a._id.standard) || 999;
@@ -116,16 +152,22 @@ router.get('/dashboard', (req, res) => {
 
     const classAllMap = {};
     processedStudents.forEach(s => {
-        const key = `${s.standard}-${s.section}`;
-        if (!classAllMap[key] || s.totalMarks > classAllMap[key].topScore) {
-            classAllMap[key] = {
-                _id: { standard: s.standard, section: s.section },
-                studentId: s._id,
-                topStudent: s.name,
-                topScore: s.totalMarks,
-                maximumMarks: s.maximumMarks,
-                percentage: s.percentage
-            };
+        if (s.maximumMarks > 0) {
+            const key = `${s.standard}-${s.section}`;
+            const isTopper = !classAllMap[key] || 
+                             s.percentage > classAllMap[key].percentage || 
+                             (s.percentage === classAllMap[key].percentage && s.totalMarks > classAllMap[key].topScore);
+
+            if (isTopper) {
+                classAllMap[key] = {
+                    _id: { standard: s.standard, section: s.section },
+                    studentId: s._id,
+                    topStudent: s.name,
+                    topScore: s.totalMarks,
+                    maximumMarks: s.maximumMarks,
+                    percentage: s.percentage
+                };
+            }
         }
     });
     const allExamsFirstMarks = Object.values(classAllMap).sort((a, b) => {
