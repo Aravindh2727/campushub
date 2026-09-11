@@ -119,8 +119,28 @@ export function Leaderboard() {
   const renderRankIcon = (rank) => {
     switch(rank) {
       case 1: return <Trophy className="w-8 h-8 text-[#AE634A] drop-shadow-sm" />;
-      case 2: return <Medal className="w-8 h-8 text-adminSidebar drop-shadow-sm" />;
-      case 3: return <Medal className="w-8 h-8 text-[#732A26] drop-shadow-sm" />;
+      case 2: return (
+        <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center drop-shadow-md transition-transform hover:scale-110">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M4.5 2.5 L12 9 L19.5 2.5 L15.5 10 L8.5 10 Z" fill="#3B82F6" />
+            <path d="M12 11.5 L9 9 L15 9 Z" fill="#2563EB" />
+            <circle cx="12" cy="15" r="7.5" fill="#E2E8F0" stroke="#CBD5E1" strokeWidth="1" />
+            <circle cx="12" cy="15" r="5.5" fill="#F8FAFC" />
+            <text x="12" y="18.8" fill="#475569" fontSize="11" fontWeight="900" textAnchor="middle" style={{fontFamily: 'system-ui, sans-serif'}}>2</text>
+          </svg>
+        </div>
+      );
+      case 3: return (
+        <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center drop-shadow-md transition-transform hover:scale-110">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M4.5 2.5 L12 9 L19.5 2.5 L15.5 10 L8.5 10 Z" fill="#3B82F6" />
+            <path d="M12 11.5 L9 9 L15 9 Z" fill="#2563EB" />
+            <circle cx="12" cy="15" r="7.5" fill="#CB8A66" stroke="#B87350" strokeWidth="1" />
+            <circle cx="12" cy="15" r="5.5" fill="#E59D77" />
+            <text x="12" y="18.8" fill="#5C311E" fontSize="11" fontWeight="900" textAnchor="middle" style={{fontFamily: 'system-ui, sans-serif'}}>3</text>
+          </svg>
+        </div>
+      );
       default: return <div className="w-8 h-8 flex items-center justify-center font-bold text-xl text-[#4C677C]/60  ">{rank}</div>;
     }
   };
