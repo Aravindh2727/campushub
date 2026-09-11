@@ -6,21 +6,148 @@ router.get('/dashboard', (req, res) => {
     const students = readCollection('students');
     const teachers = readCollection('users').filter(u => u.role === 'teacher');
     
-    let totalStudents = students.length;
-    let totalTeachers = teachers.length;
-    
-    // Simulate some logic for active class config
-    
+    let filteredStudents = students;
+    if (req.dbUser && req.dbUser.role === 'teacher') {
+        const assigned = req.dbUser.assignedClasses || [];
+        if (assigned.length > 0) {
+            filteredStudents = students.filter(s => assigned.some(c => c.standard === s.standard && c.section === s.section));
+        } else {
+            filteredStudents = [];
+        }
+    }
+
+    const totalStudents = filteredStudents.length;
+    const maleStudents = filteredStudents.filter(s => s.gender === 'Male').length;
+    const femaleStudents = filteredStudents.filter(s => s.gender === 'Female').length;
+    const totalTeachers = teachers.length;
+
+    // Helper to calculate total marks and percentage
+    const processStudents = (stList) => {
+        return stList.map(s => {
+            let totalMarks = 0;
+            if (s.terms) {
+                s.terms.forEach(t => {
+                    if (t.marks) {
+                        t.marks.forEach(m => {
+                            totalMarks += Number(m.score) || 0;
+                        });
+                    }
+                });
+            }
+            const maximumMarks = ['11', '12'].includes(s.standard) ? 600 : 500;
+            const percentage = Math.round((totalMarks / maximumMarks) * 10000) / 100;
+            const genderPriority = s.gender === 'Male' ? 1 : (s.gender === 'Female' ? 2 : 3);
+            return {
+                _id: s._id,
+                emisNumber: s.emisNumber,
+                name: s.name,
+                standard: s.standard,
+                section: s.section,
+                gender: s.gender,
+                totalMarks,
+                maximumMarks,
+                percentage,
+                genderPriority
+            };
+        }).filter(s => ['6','7','8','9','10','11','12'].includes(s.standard));
+    };
+
+    let processedStudents = processStudents(filteredStudents);
+
+    const sorter = (a, b) => {
+        if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+        if (b.totalMarks !== a.totalMarks) return b.totalMarks - a.totalMarks;
+        if (a.genderPriority !== b.genderPriority) return a.genderPriority - b.genderPriority;
+        return (a.name || '').localeCompare(b.name || '');
+    };
+
+    const topStudents = [...processedStudents].sort(sorter).slice(0, 3);
+    const top12Students = processedStudents.filter(s => s.standard === '12').sort(sorter).slice(0, 3);
+    const top10Students = processedStudents.filter(s => s.standard === '10').sort(sorter).slice(0, 3);
+
+    const abstractMap = {};
+    filteredStudents.forEach(s => {
+        const key = `${s.standard}-${s.section}`;
+        if (!abstractMap[key]) {
+            abstractMap[key] = {
+                _id: { standard: s.standard, section: s.section },
+                totalStudents: 0,
+                maleStudents: 0,
+                femaleStudents: 0
+            };
+        }
+        abstractMap[key].totalStudents++;
+        if (s.gender === 'Male') abstractMap[key].maleStudents++;
+        if (s.gender === 'Female') abstractMap[key].femaleStudents++;
+    });
+    const studentsAbstract = Object.values(abstractMap).sort((a, b) => {
+        const standardA = parseInt(a._id.standard) || 999;
+        const standardB = parseInt(b._id.standard) || 999;
+        if (standardA !== standardB) return standardA - standardB;
+        return (a._id.section || '').localeCompare(b._id.section || '');
+    });
+
+    const classTermMap = {};
+    filteredStudents.forEach(s => {
+        if (s.terms) {
+            s.terms.forEach(t => {
+                let termScore = 0;
+                if (t.marks) {
+                    t.marks.forEach(m => { termScore += Number(m.score) || 0; });
+                }
+                const key = `${s.standard}-${s.section}-${t.termName}`;
+                if (!classTermMap[key] || termScore > classTermMap[key].topScore) {
+                    classTermMap[key] = {
+                        _id: { standard: s.standard, section: s.section, termName: t.termName },
+                        topStudent: s.name,
+                        topScore: termScore
+                    };
+                }
+            });
+        }
+    });
+    const classwiseFirstMarks = Object.values(classTermMap).sort((a, b) => {
+        const standardA = parseInt(a._id.standard) || 999;
+        const standardB = parseInt(b._id.standard) || 999;
+        if (standardA !== standardB) return standardA - standardB;
+        if (a._id.section !== b._id.section) return (a._id.section || '').localeCompare(b._id.section || '');
+        return (a._id.termName || '').localeCompare(b._id.termName || '');
+    });
+
+    const classAllMap = {};
+    processedStudents.forEach(s => {
+        const key = `${s.standard}-${s.section}`;
+        if (!classAllMap[key] || s.totalMarks > classAllMap[key].topScore) {
+            classAllMap[key] = {
+                _id: { standard: s.standard, section: s.section },
+                studentId: s._id,
+                topStudent: s.name,
+                topScore: s.totalMarks,
+                maximumMarks: s.maximumMarks,
+                percentage: s.percentage
+            };
+        }
+    });
+    const allExamsFirstMarks = Object.values(classAllMap).sort((a, b) => {
+        const standardA = parseInt(a._id.standard) || 999;
+        const standardB = parseInt(b._id.standard) || 999;
+        if (standardA !== standardB) return standardA - standardB;
+        return (a._id.section || '').localeCompare(b._id.section || '');
+    });
+
     res.json({
         success: true,
         data: {
             totalStudents,
+            maleStudents,
+            femaleStudents,
             totalTeachers,
-            attendanceRate: 95,
-            recentActivities: [
-                { type: 'Homework', message: 'Demo Math Homework Added', time: new Date().toISOString() },
-                { type: 'Circular', message: 'Demo Sports Day Circular Added', time: new Date().toISOString() }
-            ]
+            topStudents,
+            top12Students,
+            top10Students,
+            studentsAbstract,
+            classwiseFirstMarks,
+            allExamsFirstMarks
         }
     });
 });
