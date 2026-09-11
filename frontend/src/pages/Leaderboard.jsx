@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { GlassCard } from '../components/ui/GlassCard';
 import { NeonButton } from '../components/ui/NeonButton';
 import { Trophy, Medal, X } from 'lucide-react';
@@ -14,6 +14,7 @@ export function Leaderboard() {
   const [studentDetails, setStudentDetails] = useState(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
   const [classConfigs, setClassConfigs] = useState([]);
+  const [rankBy, setRankBy] = useState('Marks');
 
   const fetchStudentDetails = async (id) => {
     try {
@@ -59,6 +60,61 @@ export function Leaderboard() {
     fetchLeaderboard();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedClass, selectedSection]);
+
+  const derivedLeaderboard = useMemo(() => {
+    if (!leaderboard || leaderboard.length === 0) return [];
+    
+    // 1. Calculate percentage for each student
+    let processed = leaderboard.map(student => {
+      const standard = String(student.standard);
+      const maxMarks = (standard === '11' || standard === '12') ? 600 : 500;
+      const percentage = (student.totalMarks / maxMarks) * 100;
+      return {
+        ...student,
+        calculatedPercentage: percentage,
+        displayPercentage: percentage.toFixed(2) + '%'
+      };
+    });
+
+    // 2. Sort based on rankBy
+    processed.sort((a, b) => {
+      if (rankBy === 'Marks') {
+        if (b.totalMarks !== a.totalMarks) {
+          return b.totalMarks - a.totalMarks; // DESC marks
+        }
+        return b.calculatedPercentage - a.calculatedPercentage; // DESC percentage
+      } else {
+        if (b.calculatedPercentage !== a.calculatedPercentage) {
+          return b.calculatedPercentage - a.calculatedPercentage; // DESC percentage
+        }
+        return b.totalMarks - a.totalMarks; // DESC marks
+      }
+    });
+
+    // 3. Dense Ranking and Ties
+    let currentRank = 0;
+    let prevMarks = null;
+    let prevPercentage = null;
+
+    processed.forEach((student) => {
+      const isTie = prevMarks !== null 
+        && prevMarks === student.totalMarks 
+        && prevPercentage === student.calculatedPercentage;
+
+      if (!isTie) {
+        currentRank++;
+      }
+      
+      student.computedRank = currentRank;
+      student.position = currentRank;
+      student.showPosition = !isTie;
+      
+      prevMarks = student.totalMarks;
+      prevPercentage = student.calculatedPercentage;
+    });
+
+    return processed;
+  }, [leaderboard, rankBy]);
 
   const renderRankIcon = (rank) => {
     switch(rank) {
@@ -116,6 +172,14 @@ export function Leaderboard() {
                 <option key={sec} value={sec}>Section {sec}</option>
               ))}
           </select>
+          <select
+            value={rankBy}
+            onChange={e => setRankBy(e.target.value)}
+            className="glass-input w-full sm:w-auto dark:!text-gray-900 dark:bg-transparent [&>option]:bg-white dark:[&>option]:bg-white dark:[&>option]:text-gray-900"
+          >
+            <option value="Marks">Rank By: Marks</option>
+            <option value="Percentage">Rank By: Percentage</option>
+          </select>
         </div>
       </div>
 
@@ -123,20 +187,36 @@ export function Leaderboard() {
         {loading ? (
           <div className="text-center py-10 text-[#4C677C] dark:text-gray-400">Calculating Ranks...</div>
         ) : (
-          leaderboard.map((student) => (
+          derivedLeaderboard.map((student) => (
             <div 
               key={student._id} 
               onClick={() => fetchStudentDetails(student._id)}
               className={cn(
-                "glass-card p-4 flex flex-row items-center gap-3 sm:gap-6 transition-all duration-300 hover:scale-[1.02] cursor-pointer",
-                student.rank === 1 ? "border-[#AE634A]/50 shadow-md bg-[#FDF9F7] dark:bg-[#AE634A]/10" : "",
-                student.rank === 2 ? "border-adminSidebar/50 bg-[#F2FCFA] dark:bg-adminSidebar/10" : "",
-                student.rank === 3 ? "border-[#732A26]/50 bg-[#FCF9F9] dark:bg-[#732A26]/10" : "",
-                student.rank > 3 ? "border-[#E5D9C4] dark:border-[#4C677C]/30" : ""
+                "glass-card p-3 sm:p-4 flex flex-row items-center gap-3 sm:gap-6 transition-all duration-300 hover:scale-[1.02] cursor-pointer",
+                student.computedRank === 1 ? "border-[#AE634A]/50 shadow-md bg-[#FDF9F7] dark:bg-[#AE634A]/10" : "",
+                student.computedRank === 2 ? "border-adminSidebar/50 bg-[#F2FCFA] dark:bg-adminSidebar/10" : "",
+                student.computedRank === 3 ? "border-[#732A26]/50 bg-[#FCF9F9] dark:bg-[#732A26]/10" : "",
+                student.computedRank > 3 ? "border-[#E5D9C4] dark:border-[#4C677C]/30" : ""
               )}
             >
-              <div className="w-10 sm:w-16 flex justify-center shrink-0">
-                {renderRankIcon(student.rank)}
+              {/* Position Column */}
+              <div className="w-10 sm:w-14 flex flex-col items-center justify-center shrink-0 border-r border-[#E5D9C4]/50 dark:border-gray-700/50 pr-2 sm:pr-4">
+                {student.showPosition ? (
+                  <>
+                    <span className="text-[9px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Pos</span>
+                    <span className="text-lg sm:text-2xl font-black text-[#2E1C40] dark:text-white">{student.position}</span>
+                  </>
+                ) : (
+                  <div className="h-[44px] sm:h-[52px]"></div>
+                )}
+              </div>
+
+              {/* Rank Column */}
+              <div className="w-10 sm:w-14 flex flex-col items-center justify-center shrink-0">
+                <span className="text-[9px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Rank</span>
+                <div className="transform scale-75 sm:scale-100 origin-top">
+                  {renderRankIcon(student.computedRank)}
+                </div>
               </div>
               
               <img 
@@ -146,25 +226,42 @@ export function Leaderboard() {
               />
               
               <div className="flex-1 min-w-0">
-                <h3 className="text-xl font-bold truncate text-[#2E1C40] dark:text-gray-900">{student.name}</h3>
+                <h3 className="text-lg sm:text-xl font-bold truncate text-[#2E1C40] dark:text-gray-900">{student.name}</h3>
                 <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-[#4C677C] dark:text-gray-300 text-xs sm:text-sm mt-1">
                   <span className="whitespace-nowrap">EMIS No: {student.emisNumber}</span>
                   {(selectedClass === 'All' || selectedSection === 'All') && (
-                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-2 py-0.5 rounded-full text-xs font-bold whitespace-nowrap inline-block">
+                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap inline-block">
                       Std {student.standard} - {student.section}
                     </span>
                   )}
                 </div>
               </div>
               
-              <div className="text-right shrink-0">
-                <div className="text-xs sm:text-sm text-[#4C677C] dark:text-gray-300 mb-1 whitespace-nowrap">Total Marks</div>
-                <div className={`text-xl sm:text-2xl font-black ${
-                  student.rank === 1 ? 'text-[#AE634A]' : 
-                  student.rank === 2 ? 'text-adminSidebar' : 
-                  student.rank === 3 ? 'text-[#732A26]' : 'text-[#2E1C40] dark:text-gray-900'
-                }`}>
-                  {student.totalMarks}
+              <div className="flex items-center gap-4 sm:gap-8 shrink-0 text-right pr-2">
+                <div className="flex flex-col items-end">
+                  <div className="text-[10px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Marks</div>
+                  <div className={cn(
+                    "text-base sm:text-xl font-black",
+                    rankBy === 'Marks' ? "text-[#2E1C40] dark:text-white text-lg sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
+                    student.computedRank === 1 && rankBy === 'Marks' ? 'text-[#AE634A]' : '',
+                    student.computedRank === 2 && rankBy === 'Marks' ? 'text-adminSidebar' : '',
+                    student.computedRank === 3 && rankBy === 'Marks' ? 'text-[#732A26]' : ''
+                  )}>
+                    {student.totalMarks}
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-end">
+                  <div className="text-[10px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">%</div>
+                  <div className={cn(
+                    "text-base sm:text-xl font-black",
+                    rankBy === 'Percentage' ? "text-[#2E1C40] dark:text-white text-lg sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
+                    student.computedRank === 1 && rankBy === 'Percentage' ? 'text-[#AE634A]' : '',
+                    student.computedRank === 2 && rankBy === 'Percentage' ? 'text-adminSidebar' : '',
+                    student.computedRank === 3 && rankBy === 'Percentage' ? 'text-[#732A26]' : ''
+                  )}>
+                    {student.displayPercentage}
+                  </div>
                 </div>
               </div>
             </div>
