@@ -273,8 +273,8 @@ export function Attendance() {
           <select 
             value={standard} 
             onChange={e => { setStandard(e.target.value); setSection(''); }}
-            disabled={!isAdmin && dbUser?.assignedClasses?.length > 0}
-            className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50"
+            disabled={!isAdmin}
+            className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <option value="">Select</option>
             {standards.map(s => <option key={s} value={s}>{s}</option>)}
@@ -286,8 +286,8 @@ export function Attendance() {
           <select 
             value={section} 
             onChange={e => setSection(e.target.value)}
-            disabled={!standard || (!isAdmin && dbUser?.assignedClasses?.length > 0)}
-            className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50"
+            disabled={!standard || !isAdmin}
+            className="w-full px-3 py-2 border rounded-xl bg-gray-50 text-sm focus:ring-2 focus:ring-[#4C677C] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <option value="">Select</option>
             {sections.map(s => <option key={s} value={s}>{s}</option>)}
