@@ -11,58 +11,7 @@
     "fatherName": "Richard Doe",
     "address": "123 Demo Street",
     "mobileNumber": "9876543210",
-    "terms": [
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 90
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 100
-          },
-          {
-            "subject": "English",
-            "score": 100
-          },
-          {
-            "subject": "Mathematics",
-            "score": 100
-          },
-          {
-            "subject": "Science",
-            "score": 100
-          },
-          {
-            "subject": "Social Science",
-            "score": 100
-          }
-        ]
-      }
-    ]
+    "terms": []
   },
   {
     "_id": "S-DEMO002",
@@ -98,56 +47,6 @@
           {
             "subject": "Social Science",
             "score": 90
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -189,56 +88,6 @@
             "score": 89
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -276,56 +125,6 @@
           {
             "subject": "Social Science",
             "score": 88
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -367,56 +166,6 @@
             "score": 87
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -454,56 +203,6 @@
           {
             "subject": "Social Science",
             "score": 86
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -545,56 +244,6 @@
             "score": 85
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -632,56 +281,6 @@
           {
             "subject": "Social Science",
             "score": 84
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -723,56 +322,6 @@
             "score": 83
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -810,56 +359,6 @@
           {
             "subject": "Social Science",
             "score": 82
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -901,56 +400,6 @@
             "score": 81
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -988,56 +437,6 @@
           {
             "subject": "Social Science",
             "score": 90
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }
@@ -1079,56 +478,6 @@
             "score": 89
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -1168,56 +517,6 @@
             "score": 88
           }
         ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
       }
     ]
   },
@@ -1255,56 +554,6 @@
           {
             "subject": "Social Science",
             "score": 87
-          }
-        ]
-      },
-      {
-        "termName": "Quarterly",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
-          }
-        ]
-      },
-      {
-        "termName": "First Midterm",
-        "marks": [
-          {
-            "subject": "Tamil",
-            "score": 0
-          },
-          {
-            "subject": "English",
-            "score": 0
-          },
-          {
-            "subject": "Mathematics",
-            "score": 0
-          },
-          {
-            "subject": "Science",
-            "score": 0
-          },
-          {
-            "subject": "Social Science",
-            "score": 0
           }
         ]
       }

@@ -1,16 +1,21 @@
-# React + Vite
+# EduSphere 360 - Student Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is the dedicated student frontend portal for the EduSphere 360 Education Management Platform.
 
-Currently, two official plugins are available:
+## 🚀 Running Locally (Demo Mode)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application includes a fully isolated Demo Mode.
 
-## React Compiler
+1. Ensure the backend is running in Demo Mode.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 🔑 Demo Credentials
+- **EMIS / Phone Number:** `DEMO001`
+- **Password (DOB):** `15052012`

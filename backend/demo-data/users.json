@@ -19,7 +19,8 @@
       {
         "standard": "6",
         "section": "A",
-        "accessLevel": "view"
+        "subject": "English",
+        "accessLevel": "edit"
       },
       {
         "standard": "6",
@@ -193,6 +194,6 @@
     "name": "New Pending Teacher",
     "status": "pending",
     "isActive": true,
-    "createdAt": "2026-09-11T07:40:21.356Z"
+    "createdAt": "2026-09-11T07:40:21.365Z"
   }
 ]

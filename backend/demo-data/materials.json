@@ -6,7 +6,7 @@
     "subject": "English",
     "title": "Grammar Notes - Nouns",
     "type": "document",
-    "url": "https://example.com/demo.pdf",
+    "link": "https://example.com/demo.pdf",
     "uploadedBy": "T001",
     "createdAt": "2026-09-09T15:43:53.907Z"
   },
@@ -17,8 +17,19 @@
     "subject": "Computer Science",
     "title": "Python Basics PPT",
     "type": "presentation",
-    "url": "https://example.com/demo.ppt",
+    "link": "https://example.com/demo.ppt",
     "uploadedBy": "T008",
     "createdAt": "2026-09-09T15:43:53.907Z"
+  },
+  {
+    "_id": "MAT003",
+    "standard": "12",
+    "section": "A",
+    "subject": "Computer Science",
+    "title": "Automate the Boring Stuff with Python",
+    "type": "link",
+    "link": "https://automatetheboringstuff.com/3e/?utm_source=chatgpt.com",
+    "uploadedBy": "T008",
+    "createdAt": "2026-09-12T10:39:00.000Z"
   }
 ]

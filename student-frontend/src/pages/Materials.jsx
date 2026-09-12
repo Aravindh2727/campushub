@@ -55,17 +55,13 @@ export default function Materials() {
             <div key={mat._id} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group hover:shadow-md transition-shadow">
               <div className="absolute top-0 left-0 w-1 h-full bg-[#62D4CA]"></div>
               
-              <div className="flex justify-between items-start mb-3">
+              <div className="flex justify-between items-start mb-2">
                 <span className="bg-[#62D4CA]/10 text-[#62D4CA] px-3 py-1 rounded-full text-xs font-bold">
                   {mat.subject}
                 </span>
-                <span className="text-xs text-gray-400 flex items-center">
-                  <Calendar className="w-3 h-3 mr-1" />
-                  {new Date(mat.createdAt).toLocaleDateString()}
-                </span>
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{mat.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{mat.title}</h3>
               
               {mat.description && (
                 <p className="text-sm text-gray-600 mb-4 flex-1">
@@ -73,20 +69,26 @@ export default function Materials() {
                 </p>
               )}
               
-              <div className="mt-auto pt-4">
+              <div className="mt-2 mb-4">
                 <a 
                   href={mat.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#62D4CA]/10 hover:bg-[#62D4CA]/20 text-[#0f8b80] font-bold rounded-xl transition-colors"
+                  className="flex items-center w-fit text-sm font-bold bg-[#62D4CA]/10 hover:bg-[#62D4CA]/20 text-gray-900 p-3 rounded-xl border border-[#62D4CA]/30 transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  Open Material
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Open Material Link
                 </a>
               </div>
               
-              <div className="mt-3 text-center text-xs text-gray-400">
-                Uploaded by: {mat.uploadedBy}
+              <div className="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center mt-2">
+                <div className="text-xs text-gray-500">
+                  Uploaded by: {mat.uploadedBy}
+                </div>
+                <div className="text-[10px] text-gray-400 flex items-center">
+                  <Calendar className="w-3 h-3 mr-1" />
+                  {new Date(mat.createdAt).toLocaleDateString()}
+                </div>
               </div>
             </div>
           ))}
