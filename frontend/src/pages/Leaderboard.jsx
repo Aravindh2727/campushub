@@ -232,7 +232,7 @@ export function Leaderboard() {
               key={student._id} 
               onClick={() => fetchStudentDetails(student._id)}
               className={cn(
-                "glass-card p-3 sm:p-4 flex flex-row items-center gap-3 sm:gap-6 transition-all duration-300 hover:scale-[1.02] cursor-pointer",
+                "glass-card p-2 sm:p-4 flex flex-row items-center gap-2 sm:gap-6 transition-all duration-300 hover:scale-[1.02] cursor-pointer",
                 student.computedRank === 1 ? "border-[#AE634A]/50 shadow-md bg-[#FDF9F7] dark:bg-[#AE634A]/10" : "",
                 student.computedRank === 2 ? "border-adminSidebar/50 bg-[#F2FCFA] dark:bg-adminSidebar/10" : "",
                 student.computedRank === 3 ? "border-[#732A26]/50 bg-[#FCF9F9] dark:bg-[#732A26]/10" : "",
@@ -240,11 +240,11 @@ export function Leaderboard() {
               )}
             >
               {/* Position Column */}
-              <div className="w-10 sm:w-14 flex flex-col items-center justify-center shrink-0 border-r border-[#E5D9C4]/50 dark:border-gray-700/50 pr-2 sm:pr-4">
+              <div className="w-8 sm:w-14 flex flex-col items-center justify-center shrink-0 border-r border-[#E5D9C4]/50 dark:border-gray-700/50 pr-1 sm:pr-4">
                 {student.showPosition ? (
                   <>
-                    <span className="text-[9px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Pos</span>
-                    <span className="text-lg sm:text-2xl font-black text-[#2E1C40] dark:text-white">{student.position}</span>
+                    <span className="text-[8px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Pos</span>
+                    <span className="text-base sm:text-2xl font-black text-[#2E1C40] dark:text-white">{student.position}</span>
                   </>
                 ) : (
                   <div className="h-[44px] sm:h-[52px]"></div>
@@ -252,9 +252,9 @@ export function Leaderboard() {
               </div>
 
               {/* Rank Column */}
-              <div className="w-10 sm:w-14 flex flex-col items-center justify-center shrink-0">
-                <span className="text-[9px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Rank</span>
-                <div className="transform scale-75 sm:scale-100 origin-top">
+              <div className="w-8 sm:w-14 flex flex-col items-center justify-center shrink-0">
+                <span className="text-[8px] sm:text-[10px] text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Rank</span>
+                <div className="transform scale-[0.65] sm:scale-100 origin-top">
                   {renderRankIcon(student.computedRank)}
                 </div>
               </div>
@@ -262,27 +262,27 @@ export function Leaderboard() {
               <img 
                 src={student.photoUrl || 'https://placehold.co/150'} 
                 alt={student.name}
-                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white/20 shrink-0"
+                className="w-10 h-10 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-white/20 shrink-0"
               />
               
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl font-bold truncate text-[#2E1C40] dark:text-gray-900">{student.name}</h3>
-                <div className="flex flex-col lg:flex-row lg:items-center gap-1 sm:gap-2 text-[#4C677C] dark:text-gray-300 text-xs sm:text-sm mt-1 min-w-0">
-                  <span className="truncate max-w-full" title={student.emisNumber}>EMIS No: {student.emisNumber}</span>
+                <h3 className="text-sm sm:text-xl font-bold truncate text-[#2E1C40] dark:text-gray-900">{student.name}</h3>
+                <div className="flex flex-col lg:flex-row lg:items-center gap-0.5 sm:gap-2 text-[#4C677C] dark:text-gray-300 text-[10px] sm:text-sm mt-0.5 min-w-0">
+                  <span className="truncate max-w-full" title={student.emisNumber}>EMIS: {student.emisNumber}</span>
                   {(selectedClass === 'All' || selectedSection === 'All') && (
-                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap inline-block w-max">
+                    <span className="bg-[#D8FDF6]/40 dark:bg-white text-[#2E1C40] dark:text-gray-900 px-1.5 py-0.5 rounded-full text-[9px] sm:text-xs font-bold whitespace-nowrap inline-block w-max">
                       Std {student.standard} - {student.section}
                     </span>
                   )}
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 sm:gap-8 shrink-0 text-right pr-2">
+              <div className="flex items-center gap-2 sm:gap-8 shrink-0 text-right pr-1 sm:pr-2">
                 <div className="flex flex-col items-end">
-                  <div className="text-[10px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Marks</div>
+                  <div className="text-[8px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">Marks</div>
                   <div className={cn(
-                    "text-base sm:text-xl font-black whitespace-nowrap",
-                    rankBy === 'Marks' ? "text-[#2E1C40] dark:text-white text-lg sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
+                    "text-sm sm:text-xl font-black whitespace-nowrap",
+                    rankBy === 'Marks' ? "text-[#2E1C40] dark:text-white text-base sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
                     student.computedRank === 1 && rankBy === 'Marks' ? 'text-[#AE634A]' : '',
                     student.computedRank === 2 && rankBy === 'Marks' ? 'text-adminSidebar' : '',
                     student.computedRank === 3 && rankBy === 'Marks' ? 'text-[#732A26]' : ''
@@ -292,10 +292,10 @@ export function Leaderboard() {
                 </div>
                 
                 <div className="flex flex-col items-end">
-                  <div className="text-[10px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">%</div>
+                  <div className="text-[8px] sm:text-xs text-[#4C677C] dark:text-gray-400 font-bold uppercase tracking-wider mb-0.5">%</div>
                   <div className={cn(
-                    "text-base sm:text-xl font-black",
-                    rankBy === 'Percentage' ? "text-[#2E1C40] dark:text-white text-lg sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
+                    "text-sm sm:text-xl font-black",
+                    rankBy === 'Percentage' ? "text-[#2E1C40] dark:text-white text-base sm:text-2xl" : "text-[#4C677C] dark:text-gray-300",
                     student.computedRank === 1 && rankBy === 'Percentage' ? 'text-[#AE634A]' : '',
                     student.computedRank === 2 && rankBy === 'Percentage' ? 'text-adminSidebar' : '',
                     student.computedRank === 3 && rankBy === 'Percentage' ? 'text-[#732A26]' : ''
